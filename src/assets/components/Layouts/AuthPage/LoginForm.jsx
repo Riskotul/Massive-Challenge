@@ -1,20 +1,20 @@
-import { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowLeft,
   faEyeSlash,
   faEye,
-} from '@fortawesome/free-solid-svg-icons';
-import { Text } from '../../Elements/Text/Text';
-import { Link } from 'react-router-dom';
+} from "@fortawesome/free-solid-svg-icons";
+import { Text } from "../../Elements/Text/Text";
+import { Link } from "react-router-dom";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 function LoginForm({ className }) {
   const [showPassword, setShowPassword] = useState(false);
-  const [fullname, setFullname] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [fullname, setFullname] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleLoginClick = () => {
     const data = {
@@ -95,7 +95,7 @@ function LoginForm({ className }) {
             </Text>
             <div className="relative">
               <input
-                type={showPassword ? 'text' : 'password'}
+                type={showPassword ? "text" : "password"}
                 name="password"
                 id="password"
                 placeholder="Masukkan Kata Sandi"
@@ -124,7 +124,7 @@ function LoginForm({ className }) {
             Masuk
           </Link>
           <Text textType="caption" className="self-center text-white">
-            Belum punya akun?{' '}
+            Belum punya akun?{" "}
             <Link
               to="/register"
               className="font-bold underline text-Caption hover:text-sky-400 active:text-sky-600"

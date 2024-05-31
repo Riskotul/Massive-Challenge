@@ -1,15 +1,15 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faInstagram,
   faTwitter,
   faTiktok,
-} from '@fortawesome/free-brands-svg-icons';
+} from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   return (
     <>
-      {' '}
-      <footer className="w-full h-[320px] bg-[#8DD67A] flex justify-center gap-[100px] pt-[52px]">
+      {" "}
+      <footer className="w-full h-[320px] bg-[#8DD67A] flex justify-center gap-[100px] pt-[52px] mt-[100px]">
         <div className="flex flex-col gap-[25px]">
           <div className="w-[138px] h-[65px] rounded-[20px] bg-white flex items-center justify-center">
             <img src="/images/app-logo-m.png" alt="" className="scale-75" />

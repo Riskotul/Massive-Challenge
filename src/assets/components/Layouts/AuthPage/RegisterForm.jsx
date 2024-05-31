@@ -1,20 +1,20 @@
-import { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowLeft,
   faEyeSlash,
   faEye,
-} from '@fortawesome/free-solid-svg-icons';
-import { Text } from '../../Elements/Text/Text';
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
+} from "@fortawesome/free-solid-svg-icons";
+import { Text } from "../../Elements/Text/Text";
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 function RegisterForm({ className }) {
   const [showPassword, setShowPassword] = useState(false);
-  const [fullname, setFullname] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const [fullname, setFullname] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
   const handleRegisterClick = () => {
     const registerData = {
@@ -109,7 +109,7 @@ function RegisterForm({ className }) {
             </Text>
             <div className="relative">
               <input
-                type={showPassword ? 'text' : 'password'}
+                type={showPassword ? "text" : "password"}
                 name="registerPassword"
                 id="registerPassword"
                 placeholder="Masukkan Kata Sandi"
@@ -137,7 +137,7 @@ function RegisterForm({ className }) {
             </Text>
             <div className="relative">
               <input
-                type={showPassword ? 'text' : 'password'}
+                type={showPassword ? "text" : "password"}
                 name="registerPasswordConfirm"
                 id="registerPasswordConfirm"
                 placeholder="Ulangi Kata Sandi"
@@ -166,7 +166,7 @@ function RegisterForm({ className }) {
             Buat Akun Baru
           </Link>
           <Text textType="caption" className="self-center text-white">
-            Sudah punya akun?{' '}
+            Sudah punya akun?{" "}
             <Link
               to="/login"
               className="font-bold underline text-Caption hover:text-sky-400 active:text-sky-600"
