@@ -43,6 +43,9 @@ const ProfilePage = React.lazy(() =>
 const EditProfilePage = React.lazy(() =>
   import("../components/Pages/EditProfilePage/EditProfilePage")
 );
+const FormAdopsiPage = React.lazy(() =>
+  import("../components/Pages/FormAdopsiPage/FormAdopsiPage")
+);
 
 const ProjectRoutes = () => {
   return (
@@ -69,6 +72,7 @@ const ProjectRoutes = () => {
           <Route path="/adopsi-anjing" element={<AdopsiAnjingPage />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/edit-profile" element={<EditProfilePage />} />
+          <Route path="/form-adopsi" element={<FormAdopsiPage />} />
         </Routes>
       </Router>
     </React.Suspense>

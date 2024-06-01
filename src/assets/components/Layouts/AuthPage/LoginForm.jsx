@@ -119,7 +119,7 @@ function LoginForm({ className }) {
           <Link
             to="/"
             onClick={handleLoginClick}
-            className="flex w-[354px] items-center justify-center rounded-3xl bg-primary-600 py-[10px] text-gray-50 transition duration-300 hover:bg-tertiary-600 active:scale-95 active:bg-tertiary-800"
+            className="flex w-[354px] items-center justify-center rounded-3xl bg-primary-600 py-[10px] text-gray-50 transition duration-300 hover:bg-[#8DD67A] active:scale-95 active:bg-[#8DD67A]"
           >
             Masuk
           </Link>

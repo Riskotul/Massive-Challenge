@@ -1,4 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
 const BodyDetailSection = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="w-[1220px] mt-[46px] flex flex-col items-center gap-8">
       <p>
@@ -20,7 +24,10 @@ const BodyDetailSection = () => {
         sayang, di mana dia bisa mendapatkan perawatan lanjutan dan cinta yang
         pantas dia dapatkan setelah melalui perjuangan yang begitu besar.
       </p>
-      <button className="size-fit px-[61px] py-3 rounded-lg text-white bg-[#FA9F42] text-[24px] font-medium">
+      <button
+        onClick={() => navigate("/form-adopsi")}
+        className="size-fit px-[61px] py-3 rounded-lg text-white bg-[#FA9F42] text-[24px] font-medium"
+      >
         Adopsi
       </button>
     </section>

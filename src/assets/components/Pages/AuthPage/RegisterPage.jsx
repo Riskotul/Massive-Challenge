@@ -1,8 +1,8 @@
-import RegisterForm from '../../Layouts/AuthPage/RegisterForm';
-import { Text } from '../../Elements/Text/Text';
+import RegisterForm from "../../Layouts/AuthPage/RegisterForm";
+import { Text } from "../../Elements/Text/Text";
 
 function RegisterPage() {
-  const bgImage = 'images/AuthPage/register-bg-img.png';
+  const bgImage = "images/AuthPage/register-bg-img.png";
 
   return (
     <div
@@ -14,7 +14,7 @@ function RegisterPage() {
       <RegisterForm />
       <div className="z-10 flex h-full w-[507px] flex-col justify-end gap-[15px] pb-[232px] text-gray-50">
         <Text className="text-xl font-normal ">Selamat Datang di Heywani,</Text>
-        <Text className="font-poppins text-[30px] font-medium">
+        <Text className="font-poppins text-[30px] font-bold">
           Terima kasih telah mendukung kesejahteraan hewan.
         </Text>
         <Text className="text-xl font-normal ">
