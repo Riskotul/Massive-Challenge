@@ -43,7 +43,7 @@ const HomePage = () => {
         </div>
 
         <div className="bg-white py-5 text-center mt-20">
-          <div className="bg-[#FA9F42] text-black text-xl md:text-3xl py-4 px-8 rounded-2xl inline-block mx-auto font-bold w-full md:max-w-[1195px] h-[94px] leading-[94px] font-poppins">
+          <div className="bg-[#FA9F42] text-black text-xl md:text-3xl py-9 px-8 rounded-2xl inline-block mx-auto font-bold w-full md:max-w-[1195px] h-[100px] leading-[94px] font-poppins">
             Terima Kasih Telah Mempercayai Kami
           </div>
         </div>
@@ -138,7 +138,7 @@ const HomePage = () => {
               <img
                 src={pilihKami1Image}
                 alt="Peduli dan Berpengalaman"
-                className="w-full md:w-[289px] h-auto md:h-[242px] rounded-2xl mb-6"
+                className="w-full md:w-[500px] h-auto md:h-[242px] rounded-2xl mb-6"
               />
               <h3 className="text-xl md:text-2xl font-bold mb-2">
                 Peduli dan Berpengalaman
@@ -154,7 +154,7 @@ const HomePage = () => {
               <img
                 src={pilihKami2Image}
                 alt="Proses Adopsi yang Mudah"
-                className="w-full md:w-[289px] h-auto md:h-[242px] rounded-2xl mb-6"
+                className="w-full md:w-[500px] h-auto md:h-[242px] rounded-2xl mb-6"
               />
               <h3 className="text-xl md:text-2xl font-bold mb-2">
                 Proses Adopsi yang Mudah
@@ -170,7 +170,7 @@ const HomePage = () => {
               <img
                 src={pilihKami3Image}
                 alt="Kesehatan Terjamin"
-                className="w-full md:w-[289px] h-auto md:h-[242px] rounded-2xl mb-6"
+                className="w-full md:w-[500px] h-auto md:h-[242px] rounded-2xl mb-6"
               />
               <h3 className="text-xl md:text-2xl font-bold mb-2">
                 Kesehatan Terjamin
