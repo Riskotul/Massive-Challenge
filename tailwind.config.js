@@ -4,6 +4,14 @@ export default {
   theme: {
     extend: {
       colors: {
+        screens: {
+          'xs': '475px',
+          'sm': '640px',
+          'md': '768px',
+          'lg': '1024px',
+          'xl': '1280px',
+          '2xl': '1536px', 
+        },
         grey: {
           50: '#F6F6F6',
           100: '#ECECEC',

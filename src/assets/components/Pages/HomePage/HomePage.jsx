@@ -17,27 +17,20 @@ const HomePage = () => {
     <>
       <NavbarLogin />
       <div>
-        <div className="bg-[#8DD67A] py-[50px] px-20 flex justify-between items-center gap-10 ">
-          <div className="flex-1 justify-items-center ">
-            <h1 className="text-4xl mb-12 font-bold">
-              Selamat Datang di Heywani
-            </h1>
-            <p className="text-2xl mb-12">
-              Bersama, kita bisa memberi harapan dan rumah
-              <br /> bagi hewan. Ayo selamatkan nyawa mereka!!
-            </p>
-            <button className="bg-[#FA9F42] border-none text-black py-2 px-4 cursor-pointer rounded-xl text-xl mt-2">
-              <Link to="/homelogin" className="no-underline text-black">
-                Selengkapnya
-              </Link>
-            </button>
+          <div className="bg-[#8DD67A] w-full py-12 md:py-24 px-6 md:px-12 lg:px-20 flex flex-col md:flex-row justify-between items-center gap-10">
+            <div className="flex-1 justify-items-center text-center md:text-left">
+              <h1 className="text-2xl md:text-4xl lg:text-4xl mb-4 md:mb-8 font-bold">Heywani</h1>
+              <p className="text-lg md:text-1xl lg:text-2xl mb-4 md:mb-8">
+                  Selamatkan, adopsi, dan cintai hewan-hewan terlantar bersama kami. Jadilah bagian dari perubahan dan berikan mereka rumah penuh kasih. Mari bersama-sama menciptakan dunia yang lebih baik untuk hewan!
+              </p>
+              <button className="bg-[#FA9F42] border-none text-black py-2 px-6 md:py-3 md:px-8 cursor-pointer rounded-xl text-lg md:text-xl mt-2 md:mt-4">
+                  <Link to="/popupadopsi" className="no-underline text-black">
+                      Adopsi
+                  </Link>
+              </button>
+            </div>
+            <img src={headerImage} alt="Deskripsi gambar" className="w-full md:w-auto h-[320px] md:h-auto" style={{ maxWidth: '700px' }} />
           </div>
-          <img
-            src={headerImage}
-            alt="Deskripsi gambar"
-            className="w-[782px] h-[528px]"
-          />
-        </div>
 
         <div className="bg-white py-5 text-center mt-20">
           <div className="bg-[#FA9F42]  text-black text-4xl py-4 px-10 rounded-2xl inline-block mx-auto font-bold w-[1195px] h-[94px] leading-[94px] font-poppins">
@@ -113,12 +106,12 @@ const HomePage = () => {
               dan memberikan dukungan bagi hewan di Heywani.”
             </h1>
             <button className="bg-[#FA9F42] border-none text-black py-2 px-4 cursor-pointer rounded-xl text-xl mt-2">
-              <Link to="/Popupform" className="no-underline text-black">
+              <Link to="/donation" className="no-underline text-black">
                 Donasi
               </Link>
             </button>
             <button className="bg-[#FA9F42] border-none text-black py-2 px-4 cursor-pointer rounded-xl text-xl mt-2 ml-20">
-              <Link to="/popupdonasi" className="no-underline text-black">
+              <Link to="/contact" className="no-underline text-black">
                 Evakuasi Hewan
               </Link>
             </button>
@@ -183,3 +176,4 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
