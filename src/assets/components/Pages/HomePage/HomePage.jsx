@@ -17,6 +17,20 @@ const HomePage = () => {
     <>
       <NavbarLogin />
       <div>
+          <div className="bg-[#8DD67A] w-full py-12 md:py-24 px-6 md:px-12 lg:px-20 flex flex-col md:flex-row justify-between items-center gap-10">
+            <div className="flex-1 justify-items-center text-center md:text-left">
+              <h1 className="text-2xl md:text-4xl lg:text-4xl mb-4 md:mb-8 font-bold">Heywani</h1>
+              <p className="text-lg md:text-1xl lg:text-2xl mb-4 md:mb-8">
+                  Selamatkan, adopsi, dan cintai hewan-hewan terlantar bersama kami. Jadilah bagian dari perubahan dan berikan mereka rumah penuh kasih. Mari bersama-sama menciptakan dunia yang lebih baik untuk hewan!
+              </p>
+              <button className="bg-[#FA9F42] border-none text-black py-2 px-6 md:py-3 md:px-8 cursor-pointer rounded-xl text-lg md:text-xl mt-2 md:mt-4">
+                  <Link to="/popupadopsi" className="no-underline text-black">
+                      Adopsi
+                  </Link>
+              </button>
+            </div>
+            <img src={headerImage} alt="Deskripsi gambar" className="w-full md:w-auto h-[320px] md:h-auto" style={{ maxWidth: '700px' }} />
+          </div>
         <div className="bg-[#8DD67A] py-[50px] px-20 flex justify-between items-center gap-10 ">
           <div className="flex-1 justify-items-center text-center md:text-left">
             <h1 className="text-2xl md:text-4xl lg:text-4xl mb-4 md:mb-8 font-bold">
@@ -113,6 +127,16 @@ const HomePage = () => {
               “Temukan cara Anda agar dapat ikut berperan dalam menyelamatkan
               dan memberikan dukungan bagi hewan di Heywani.”
             </h1>
+            <button className="bg-[#FA9F42] border-none text-black py-2 px-4 cursor-pointer rounded-xl text-xl mt-2">
+              <Link to="/donation" className="no-underline text-black">
+                Donasi
+              </Link>
+            </button>
+            <button className="bg-[#FA9F42] border-none text-black py-2 px-4 cursor-pointer rounded-xl text-xl mt-2 ml-20">
+              <Link to="/contact" className="no-underline text-black">
+                Evakuasi Hewan
+              </Link>
+            </button>
             <div className="flex gap-x-4">
               <button className="bg-[#FA9F42] border-none text-black py-2 px-4 cursor-pointer rounded-xl text-xl mt-2">
                 <Link to="/Popupform" className="no-underline text-black">
@@ -186,3 +210,4 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
