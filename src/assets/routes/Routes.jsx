@@ -46,12 +46,6 @@ const EditProfilePage = React.lazy(() =>
 const FormAdopsiPage = React.lazy(() =>
   import("../components/Pages/FormAdopsiPage/FormAdopsiPage")
 );
-const StatistikCard = React.lazy(() =>
-  import("../components/Layouts/StatistikCard/StatistikCard")
-);
-const FeatureCard = React.lazy(() =>
-  import("../components/Layouts/FeatureCard/FeatureCard")
-);
 
 const ProjectRoutes = () => {
   return (
@@ -79,8 +73,6 @@ const ProjectRoutes = () => {
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/edit-profile" element={<EditProfilePage />} />
           <Route path="/form-adopsi" element={<FormAdopsiPage />} />
-          <Route path="/statistikcard" element={<StatistikCard />} />
-          <Route path="/featurecard" element={<FeatureCard />} />
         </Routes>
       </Router>
     </React.Suspense>
