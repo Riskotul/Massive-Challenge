@@ -11,32 +11,32 @@ const PopUpAdopsi = ({ onClickChange, isOpen }) => {
 
   return (
     <div
-      className={
-        isOpen
-          ? "fixed inset-0 z-[60] items-center justify-center backdrop-filter backdrop-brightness-50 backdrop-blur-sm flex"
-          : "fixed inset-0 z-[60] items-center justify-center backdrop-filter backdrop-brightness-50 backdrop-blur-sm hidden"
-      }
+      className={`fixed inset-0 z-[60] items-center justify-center backdrop-filter backdrop-brightness-50 backdrop-blur-sm ${
+        isOpen ? "flex" : "hidden"
+      }`}
     >
-      <div className="w-[788px] h-[664px] rounded-[32px] bg-white py-[128px] px-16 flex flex-col gap-10 items-center relative">
+      <div className="w-full max-w-[788px] h-auto md:h-[664px] rounded-[32px] bg-white py-10 md:py-[128px] px-4 md:px-16 flex flex-col gap-10 items-center relative">
         <FontAwesomeIcon
           icon={faXmark}
-          className="absolute cursor-pointer top-8 right-10 size-6"
+          className="absolute cursor-pointer top-4 right-6 md:top-8 md:right-10 text-2xl md:text-3xl"
           onClick={handleChange}
         />
-        <h1 className="text-[36px] font-bold">Adopsi apa sekarang?</h1>
-        <div className="flex items-center gap-8">
+        <h1 className="text-[24px] md:text-[36px] font-bold text-center">
+          Adopsi apa sekarang?
+        </h1>
+        <div className="flex flex-col md:flex-row items-center gap-8">
           <Link to="/adopsi-kucing">
             <img
               src="/images/ServicesPage/adopsi-kucing.png"
-              alt=""
-              className="size-[314px] cursor-pointer hover:scale-110 transition-all duration-300"
+              alt="Adopsi Kucing"
+              className="w-full max-w-[314px] cursor-pointer hover:scale-110 transition-all duration-300"
             />
           </Link>
           <Link to="/adopsi-anjing">
             <img
               src="/images/ServicesPage/adopsi-anjing.png"
-              alt=""
-              className="size-[314px] cursor-pointer hover:scale-110 transition-all duration-300"
+              alt="Adopsi Anjing"
+              className="w-full max-w-[314px] cursor-pointer hover:scale-110 transition-all duration-300"
             />
           </Link>
         </div>
@@ -58,26 +58,26 @@ const ServicesHeroSection = () => {
   };
 
   return (
-    <div className="w-[1288px] h-[468px] rounded-[32px] bg-[#8DD67A] flex items-center gap-[64px] pl-[64px]">
+    <div className="w-full max-w-[1288px] h-auto md:h-[468px] rounded-[32px] bg-[#8DD67A] flex flex-col md:flex-row items-center gap-[32px] md:gap-[64px] p-4 md:pl-[64px] mx-auto">
       <PopUpAdopsi onClickChange={handlePopUpAdopsi} isOpen={popUpAdopsi} />
-      <div className="flex flex-col max-w-[516px] gap-4">
-        <h1 className="text-[36px] font-bold">
+      <div className="flex flex-col max-w-full md:max-w-[516px] gap-4 text-center md:text-left">
+        <h1 className="text-[24px] md:text-[36px] font-bold">
           Hey! Ayo adopsi calon peliharaanmu sekarang
         </h1>
-        <h2>
+        <h2 className="text-base md:text-lg">
           Cari dan temukan teman untuk dibawa pulang ke rumah sekarang juga
         </h2>
         <button
           onClick={handlePopUpAdopsi}
-          className="w-[87px] h-fit py-[10px] bg-white rounded-lg font-semibold mt-4"
+          className="w-full md:w-[87px] h-fit py-[10px] bg-white rounded-lg font-semibold mt-4"
         >
           Adopsi
         </button>
       </div>
       <img
-        src="/images/ServicesPage/services-hero.png "
-        alt=""
-        className="w-[644px]"
+        src="/images/ServicesPage/services-hero.png"
+        alt="Services Hero"
+        className="w-full max-w-[644px] h-auto"
       />
     </div>
   );

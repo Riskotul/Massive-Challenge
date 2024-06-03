@@ -4,7 +4,7 @@ import { faInstagram, faTwitter, faTiktok } from "@fortawesome/free-brands-svg-i
 const Footer = () => {
   return (
     <>
-      <footer className="w-full bg-[#8DD67A] flex flex-col md:flex-row justify-center items-center gap-10 py-8 md:py-12 px-6 md:px-24 lg:px-32">
+      <footer className="w-full bg-[#8DD67A] flex flex-col md:flex-row justify-center items-center gap-28 py-8 md:py-12 px-6 md:px-24 lg:px-32">
         <div className="flex flex-col gap-6 items-center md:items-start">
           <div className="w-[138px] h-[65px] rounded-[20px] bg-white flex items-center justify-center">
             <img src="/images/app-logo-m.png" alt="" className="w-32 h-auto" />
