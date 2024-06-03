@@ -17,7 +17,7 @@ const AboutPage = () => {
     <>
       <NavbarLogin />
       <div>
-        <div className="bg-white py-[50px] px-20 flex justify-between items-center gap-10">
+        <div className="bg-white w-full py-10 md:py-20 lg:py-32 px-4 md:px-8 lg:px-16 xl:px-20 flex flex-col md:flex-row justify-between items-center gap-10">
           <div className="container mx-auto">
             <div className="main-content flex flex-col lg:flex-row items-center gap-10">
               <div className="content flex-1 mt-10 lg:mt-0">
@@ -45,12 +45,12 @@ const AboutPage = () => {
               />
             </div>
 
-            <h1 className="section-title text-4xl font-bold text-center mt-40 mb-20">
+            <h1 className="section-title text-3xl md:text-4xl lg:text-4xl font-bold text-center mt-20 mb-16">
               Tim Kami
             </h1>
-            <div className="tim-kami flex flex-wrap justify-center gap-10">
-              <div className="item text-center">
-                <div className="image-container w-[250px] h-[252px] overflow-hidden rounded-full mb-4 mx-auto">
+            <div className="tim-kami flex flex-wrap justify-center gap-8">
+              <div className="item text-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
+                <div className="image-container w-[200px] h-[200px] overflow-hidden rounded-full mb-4 mx-auto">
                   <img
                     src={teamImage1}
                     alt="Yezika Rachman"
@@ -60,8 +60,8 @@ const AboutPage = () => {
                 <p className="text-2xl font-bold mt-10">Yezika Rachman</p>
                 <span className="text-lg mt-20">Product Manager</span>
               </div>
-              <div className="item text-center">
-                <div className="image-container w-[250px] h-[252px] overflow-hidden rounded-full mb-4 mx-auto">
+              <div className="item text-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
+                <div className="image-container w-[200px] h-[200px] overflow-hidden rounded-full mb-4 mx-auto">
                   <img
                     src={teamImage2}
                     alt="Eka Kurnia F"
@@ -71,8 +71,8 @@ const AboutPage = () => {
                 <p className="text-2xl font-bold mt-10">Eka Kurnia F</p>
                 <span className="text-lg mt-20">Product Designer</span>
               </div>
-              <div className="item text-center">
-                <div className="image-container w-[250px] h-[252px] overflow-hidden rounded-full mb-4 mx-auto">
+              <div className="item text-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
+                <div className="image-container w-[200px] h-[200px] overflow-hidden rounded-full mb-4 mx-auto">
                   <img
                     src={teamImage3}
                     alt="Novi Indah P.S"
@@ -82,8 +82,8 @@ const AboutPage = () => {
                 <p className="text-2xl font-bold mt-10">Novi Indah P.S</p>
                 <span className="text-lg mt-20">Product Designer</span>
               </div>
-              <div className="item text-center">
-                <div className="image-container w-[250px] h-[252px] overflow-hidden rounded-full mb-4 mx-auto">
+              <div className="item text-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
+                <div className="image-container w-[200px] h-[200px] overflow-hidden rounded-full mb-4 mx-auto">
                   <img
                     src={teamImage4}
                     alt="Riskotul M"
@@ -93,8 +93,8 @@ const AboutPage = () => {
                 <p className="text-2xl font-bold mt-10">Riskotul M</p>
                 <span className="text-lg mt-20">Programmer</span>
               </div>
-              <div className="item text-center">
-                <div className="image-container w-[250px] h-[252px] overflow-hidden rounded-full mb-4 mx-auto">
+              <div className="item text-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
+                <div className="image-container w-[200px] h-[200px] overflow-hidden rounded-full mb-4 mx-auto">
                   <img
                     src={teamImage5}
                     alt="Akhiratul Akmal A"
