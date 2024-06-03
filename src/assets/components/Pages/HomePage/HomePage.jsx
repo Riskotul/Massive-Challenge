@@ -17,29 +17,6 @@ const HomePage = () => {
     <>
       <NavbarLogin />
       <div>
-        <div className="bg-[#8DD67A] py-[50px] px-20 flex justify-between items-center gap-10">
-          <div className="flex-1 text-center md:text-left">
-            <h1 className="text-2xl md:text-4xl lg:text-4xl mb-4 md:mb-8 font-bold">
-              Selamat Datang di Heywani
-            </h1>
-            <p className="text-lg md:text-1xl lg:text-2xl mb-4 md:mb-8">
-              Bersama, kita bisa memberi harapan dan rumah
-              <br /> bagi hewan. Ayo selamatkan nyawa mereka!!
-            </p>
-            <button className="bg-[#FA9F42] border-none text-black py-2 px-6 md:py-3 md:px-8 cursor-pointer rounded-xl text-lg md:text-xl mt-2 md:mt-4">
-              <Link to="/homelogin" className="no-underline text-black">
-                Selengkapnya
-              </Link>
-            </button>
-          </div>
-          <img
-            src={headerImage}
-            alt="Deskripsi gambar"
-            className="w-full md:w-auto h-[320px] md:h-auto"
-            style={{ maxWidth: "800px" }}
-          />
-        </div>
-
         <div className="bg-[#8DD67A] w-full py-12 md:py-24 px-6 md:px-12 lg:px-20 flex flex-col md:flex-row justify-between items-center gap-10">
           <div className="flex-1 text-center md:text-left">
             <h1 className="text-2xl md:text-4xl lg:text-4xl mb-4 md:mb-8 font-bold">
