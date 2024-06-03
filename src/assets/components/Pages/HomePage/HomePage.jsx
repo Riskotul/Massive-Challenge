@@ -44,7 +44,7 @@ const HomePage = () => {
 
         <div className="bg-white py-5 text-center mt-20">
           <div className="bg-[#FA9F42] text-black text-xl md:text-3xl py-9 px-8 rounded-2xl inline-block mx-auto font-bold w-full md:max-w-[1195px] h-[100px] leading-[94px] font-poppins">
-            INI AKMAL
+            Terima Kasih Telah Mempercayai Kami
           </div>
         </div>
 

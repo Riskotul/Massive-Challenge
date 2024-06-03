@@ -17,7 +17,7 @@ const AboutPage = () => {
     <>
       <NavbarLogin />
       <div>
-        <div className="bg-white w-full py-10 md:py-20 lg:py-32 px-4 md:px-8 lg:px-16 xl:px-20 flex flex-col md:flex-row justify-between items-center gap-10">
+        <div className="bg-white w-full py-10 md:py-20 lg:py-32 px-4 md:px-8 lg:px-16 xl:px-20 flex flex-col justify-between items-center gap-10">
           <div className="container mx-auto">
             <div className="main-content flex flex-col lg:flex-row items-center gap-10">
               <div className="content flex-1 mt-10 lg:mt-0">
@@ -41,68 +41,68 @@ const AboutPage = () => {
               <img
                 src={headerAbout}
                 alt="Misi Kami"
-                className="w-[563px] h-[456px]"
+                className="w-full lg:w-[563px] h-auto"
               />
             </div>
 
             <h1 className="section-title text-3xl md:text-4xl lg:text-4xl font-bold text-center mt-20 mb-16">
               Tim Kami
             </h1>
-            <div className="tim-kami flex flex-wrap justify-center gap-8">
-              <div className="item text-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                <div className="image-container w-[200px] h-[200px] overflow-hidden rounded-full mb-4 mx-auto">
+            <div className="tim-kami flex flex-wrap justify-center">
+              <div className="item text-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex flex-col items-center">
+                <div className="image-container w-[200px] h-[200px] overflow-hidden rounded-full mb-4">
                   <img
                     src={teamImage1}
                     alt="Yezika Rachman"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <p className="text-2xl font-bold mt-10">Yezika Rachman</p>
-                <span className="text-lg mt-20">Product Manager</span>
+                <p className="text-2xl font-bold">Yezika Rachman</p>
+                <span className="text-lg">Product Manager</span>
               </div>
-              <div className="item text-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                <div className="image-container w-[200px] h-[200px] overflow-hidden rounded-full mb-4 mx-auto">
+              <div className="item text-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex flex-col items-center">
+                <div className="image-container w-[200px] h-[200px] overflow-hidden rounded-full mb-4">
                   <img
                     src={teamImage2}
                     alt="Eka Kurnia F"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <p className="text-2xl font-bold mt-10">Eka Kurnia F</p>
-                <span className="text-lg mt-20">Product Designer</span>
+                <p className="text-2xl font-bold">Eka Kurnia F</p>
+                <span className="text-lg">Product Designer</span>
               </div>
-              <div className="item text-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                <div className="image-container w-[200px] h-[200px] overflow-hidden rounded-full mb-4 mx-auto">
+              <div className="item text-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex flex-col items-center">
+                <div className="image-container w-[200px] h-[200px] overflow-hidden rounded-full mb-4">
                   <img
                     src={teamImage3}
                     alt="Novi Indah P.S"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <p className="text-2xl font-bold mt-10">Novi Indah P.S</p>
-                <span className="text-lg mt-20">Product Designer</span>
+                <p className="text-2xl font-bold">Novi Indah P.S</p>
+                <span className="text-lg">Product Designer</span>
               </div>
-              <div className="item text-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                <div className="image-container w-[200px] h-[200px] overflow-hidden rounded-full mb-4 mx-auto">
+              <div className="item text-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex flex-col items-center">
+                <div className="image-container w-[200px] h-[200px] overflow-hidden rounded-full mb-4">
                   <img
                     src={teamImage4}
                     alt="Riskotul M"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <p className="text-2xl font-bold mt-10">Riskotul M</p>
-                <span className="text-lg mt-20">Programmer</span>
+                <p className="text-2xl font-bold">Riskotul M</p>
+                <span className="text-lg">Programmer</span>
               </div>
-              <div className="item text-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                <div className="image-container w-[200px] h-[200px] overflow-hidden rounded-full mb-4 mx-auto">
+              <div className="item text-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex flex-col items-center">
+                <div className="image-container w-[200px] h-[200px] overflow-hidden rounded-full mb-4">
                   <img
                     src={teamImage5}
                     alt="Akhiratul Akmal A"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <p className="text-2xl font-bold mt-10">Akhiratul Akmal A</p>
-                <span className="text-lg mt-20">Programmer</span>
+                <p className="text-2xl font-bold">Akhiratul Akmal A</p>
+                <span className="text-lg">Programmer</span>
               </div>
             </div>
 
@@ -114,28 +114,28 @@ const AboutPage = () => {
                 <img
                   src={galleryImage1}
                   alt="Gambar 1"
-                  className="w-[353px] h-[443px] object-cover rounded-xl shadow-xl"
+                  className="w-full lg:w-[353px] h-auto object-cover rounded-xl shadow-xl"
                 />
               </div>
               <div className="zigzag-item">
                 <img
                   src={galleryImage2}
                   alt="Gambar 2"
-                  className="w-[353px] h-[443px]  object-cover rounded-xl shadow-xl"
+                  className="w-full lg:w-[353px] h-auto object-cover rounded-xl shadow-xl"
                 />
               </div>
               <div className="zigzag-item">
                 <img
                   src={galleryImage3}
                   alt="Gambar 3"
-                  className="w-[353px] h-[443px]  object-cover rounded-xl shadow-xl"
+                  className="w-full lg:w-[353px] h-auto object-cover rounded-xl shadow-xl"
                 />
               </div>
               <div className="zigzag-item">
                 <img
                   src={galleryImage4}
                   alt="Gambar 4"
-                  className="w-[353px] h-[443px]  object-cover rounded-xl shadow-xl"
+                  className="w-full lg:w-[353px] h-auto object-cover rounded-xl shadow-xl"
                 />
               </div>
             </div>
