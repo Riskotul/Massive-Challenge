@@ -2,8 +2,9 @@ import { Link } from "react-router-dom";
 import { NavbarLogin } from "../../Fragments/Navbar/Navbar";
 import Footer from "../../Fragments/Footer/Footer";
 
+
 const HomePage = () => {
-  const headerImage = "/images/HomePage/header_masuk.png";
+  const headerImage = "/images/HomePage/header_homelogin.png";
   const animalRescueImage = "/images/HomePage/animal_resque.png";
   const rescuersListedImage = "/images/HomePage/rescuers_listed.png";
   const animalHousesImage = "/images/HomePage/animal_houses.png";
