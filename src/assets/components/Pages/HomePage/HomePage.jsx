@@ -1,7 +1,57 @@
 import { Link } from "react-router-dom";
 import { NavbarLogin } from "../../Fragments/Navbar/Navbar";
 import Footer from "../../Fragments/Footer/Footer";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import PropTypes from "prop-types";
+import { useState } from "react";
 
+
+const PopUpAdopsi = ({ onClickChange, isOpen }) => {
+  const handleChange = () => {
+    onClickChange();
+  };
+
+  return (
+    <div
+      className={`fixed inset-0 z-[60] items-center justify-center backdrop-filter backdrop-brightness-50 backdrop-blur-sm ${
+        isOpen ? "flex" : "hidden"
+      }`}
+    >
+      <div className="w-full max-w-[788px] h-auto md:h-[664px] rounded-[32px] bg-white py-10 md:py-[128px] px-4 md:px-16 flex flex-col gap-10 items-center relative">
+        <FontAwesomeIcon
+          icon={faXmark}
+          className="absolute cursor-pointer top-4 right-6 md:top-8 md:right-10 text-2xl md:text-3xl"
+          onClick={handleChange}
+        />
+        <h1 className="text-[24px] md:text-[36px] font-bold text-center">
+          Adopsi apa sekarang?
+        </h1>
+        <div className="flex flex-col md:flex-row items-center gap-8">
+          <Link to="/adopsi-kucing">
+            <img
+              src="/images/ServicesPage/adopsi-kucing.png"
+              alt="Adopsi Kucing"
+              className="w-full max-w-[314px] cursor-pointer hover:scale-110 transition-all duration-300"
+            />
+          </Link>
+          <Link to="/adopsi-anjing">
+            <img
+              src="/images/ServicesPage/adopsi-anjing.png"
+              alt="Adopsi Anjing"
+              className="w-full max-w-[314px] cursor-pointer hover:scale-110 transition-all duration-300"
+            />
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+PopUpAdopsi.propTypes = {
+  onClickChange: PropTypes.func.isRequired,
+  isOpen: PropTypes.bool.isRequired,
+};
 
 const HomePage = () => {
   const headerImage = "/images/HomePage/header_homelogin.png";
@@ -14,11 +64,18 @@ const HomePage = () => {
   const pilihKami2Image = "/images/HomePage/pilihkami_2.png";
   const pilihKami3Image = "/images/HomePage/pilihkami_3.png";
 
+  const [popUpAdopsi, setPopUpAdopsi] = useState(false);
+
+  const handlePopUpAdopsi = () => {
+    setPopUpAdopsi(!popUpAdopsi);
+  };
+
   return (
     <>
       <NavbarLogin />
       <div>
         <div className="bg-[#8DD67A] w-full py-12 md:py-24 px-6 md:px-12 lg:px-20 flex flex-col md:flex-row justify-between items-center gap-10">
+          <PopUpAdopsi onClickChange={handlePopUpAdopsi} isOpen={popUpAdopsi} />
           <div className="flex-1 text-center md:text-left">
             <h1 className="text-2xl md:text-4xl lg:text-4xl mb-4 md:mb-8 font-bold">
               Heywani
@@ -29,10 +86,11 @@ const HomePage = () => {
               kasih. Mari bersama-sama menciptakan dunia yang lebih baik untuk
               hewan!
             </p>
-            <button className="bg-[#FA9F42] border-none text-black py-2 px-6 md:py-3 md:px-8 cursor-pointer rounded-xl text-lg md:text-xl mt-2 md:mt-4">
-              <Link to="/popupadopsi" className="no-underline text-black">
+            <button
+              onClick={handlePopUpAdopsi}
+              className="w-full md:w-[150px] h-fit py-[10px] bg-[#FA9F42] rounded-2xl font-semibold mt-4 text-xl"
+              >
                 Adopsi
-              </Link>
             </button>
           </div>
           <img
