@@ -466,7 +466,7 @@ const FormSection = () => {
       </section>{' '}
       <button
         onClick={handlePopUp}
-        className="rounded-lg size-fit py-3 px-[72px] text-white bg-[#FA9F42] text-[24px] font-medium mt-7 active:scale-90 transition-all duration-150"
+        className="rounded-lg size-fit py-3 px-[72px] text-white bg-[#FA9F42] text-[24px] font-medium mt-7 active:scale-90 transition-all duration-150 mb-20"
       >
         Kirim
       </button>
