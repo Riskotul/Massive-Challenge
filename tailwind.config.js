@@ -130,6 +130,9 @@ export default {
             fontWeight: '400',
           },
         ],
+        textAlign: {
+          'justify': 'justify',
+        },
       },
     },
   },

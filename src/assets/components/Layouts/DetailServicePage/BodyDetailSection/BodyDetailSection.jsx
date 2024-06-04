@@ -4,8 +4,8 @@ const BodyDetailSection = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="w-[1220px] mt-[46px] flex flex-col items-center gap-8">
-      <p>
+    <section className="w-full max-w-[1220px] mt-12 flex flex-col items-center gap-8 px-4 md:px-8 lg:px-12">
+      <p className="text-sm md:text-base lg:text-lg">
         Lucky (1 Tahun) adalah seekor Kucing Himalaya yang ditelantarkan oleh
         pemiliknya dan ditemukan dalam kondisi yang sangat memprihatinkan,
         dengan salah satu kakinya mengalami luka serius yang bahkan membuatnya
@@ -26,7 +26,7 @@ const BodyDetailSection = () => {
       </p>
       <button
         onClick={() => navigate("/form-adopsi")}
-        className="size-fit px-[61px] py-3 rounded-lg text-white bg-[#FA9F42] text-[24px] font-medium"
+        className="min-w-[200px] w-full md:w-auto px-8 py-3 rounded-lg text-white bg-[#FA9F42] text-lg md:text-xl font-medium"
       >
         Adopsi
       </button>

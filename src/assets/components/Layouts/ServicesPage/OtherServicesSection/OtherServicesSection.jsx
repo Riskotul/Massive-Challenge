@@ -39,67 +39,67 @@ const PopUpDetailLayanan = ({
           : "fixed inset-0 z-[60] items-center justify-center backdrop-filter backdrop-brightness-50 backdrop-blur-sm hidden"
       }
     >
-      <div className="w-[788px] h-[500px] rounded-2xl bg-white flex flex-col items-center pb-[37px] pt-[25px] font-inter relative">
+      <div className="max-w-[788px] w-full h-auto rounded-2xl bg-white flex flex-col items-center pb-[37px] pt-[25px] font-inter relative">
         <FontAwesomeIcon
           icon={faXmark}
           className="absolute cursor-pointer top-8 right-10 size-6"
           onClick={handleChange}
         />
         <img
-          src={img}
-          alt=""
-          className="max-w-[640px] h-[200px] object-contain"
+        src={img}
+        alt=""
+        className="max-w-full h-[200px] object-contain"
         />
         <div className="w-full h-[49px] flex py-4 justify-between px-[45px]">
           <h1 className="text-[14px]">{jenis}</h1>
           <h1 className="text-[14px]">{layanan}</h1>
         </div>
-        <div className="w-full py-2 px-[45px] flex justify-between">
-          <div className="w-full h-[131px]">
+        <div className="w-full py-2 px-[45px] flex flex-col md:flex-row justify-between">
+          <div className="w-full md:w-[60%] h-auto">
             <h1 className="text-[18px] font-semibold">{namaLayanan}</h1>
-            <div className="flex items-center gap-2 mt-1">
-              <img
-                src="/images/ServicesPage/service-date-icon.png"
-                alt=""
-                className="size-5"
-              />
-              <h1 className="text-[14px]">{jadwal}</h1>
-            </div>
-            <div className="flex items-center gap-2 mt-2">
-              <img
-                src="/images/ServicesPage/service-map-icon.png"
-                alt=""
-                className="size-5"
-              />
-              <h1 className="text-[14px]">{lokasi}</h1>
-            </div>
-            <div className="flex items-center gap-3 mt-5">
-              {jenisHewan.map((hewan, index) => (
-                <h1
-                  key={index}
-                  className="text-[14px] size-fit px-2 py-1 rounded-full bg-[#E7E7E7]"
-                >
-                  {hewan}
-                </h1>
-              ))}
-            </div>
-            <button className="font-bold size-fit px-4 py-[10px] rounded-lg bg-[#FA9F42] text-white mt-4">
-              Daftar sekarang
-            </button>
+          <div className="flex items-center gap-2 mt-1">
+            <img
+              src="/images/ServicesPage/service-date-icon.png"
+              alt=""
+              className="size-5"
+            />
+            <h1 className="text-[14px]">{jadwal}</h1>
           </div>
-          <div className="flex flex-col w-full gap-1">
-            <h1 className="text-[18px] font-semibold">Syarat & Ketentuan</h1>
-            <ol className="ml-5 list-decimal">
-              <li>Domisili Kota Bekasi</li>
-              <li>Usia hewan minimal 6 bulan</li>
-              <li>Dalam keadaan sehat</li>
-              <li>Minimal 3 hari, jeda waktu setelah mandi</li>
-              <li>Minimal 2 minggu, jeda waktu pasca sakit</li>
-              <li>Harap membawa fotocopy KTP</li>
-            </ol>
+          <div className="flex items-center gap-2 mt-2">
+            <img
+              src="/images/ServicesPage/service-map-icon.png"
+              alt=""
+              className="size-5"
+            />
+            <h1 className="text-[14px]">{lokasi}</h1>
           </div>
+          <div className="flex items-center gap-3 mt-5">
+            {jenisHewan.map((hewan, index) => (
+              <h1
+                key={index}
+                className="text-[14px] size-fit px-2 py-1 rounded-full bg-[#E7E7E7]"
+              >
+                {hewan}
+              </h1>
+            ))}
+          </div>
+          <button className="font-bold size-fit px-4 py-[10px] rounded-lg bg-[#FA9F42] text-white mt-4">
+            Daftar sekarang
+          </button>
+        </div>
+        <div className="flex flex-col w-full md:w-[40%] gap-1 mt-4 md:mt-0">
+          <h1 className="text-[18px] font-semibold">Syarat & Ketentuan</h1>
+          <ol className="ml-5 list-decimal">
+            <li>Domisili Kota Bekasi</li>
+            <li>Usia hewan minimal 6 bulan</li>
+            <li>Dalam keadaan sehat</li>
+            <li>Minimal 3 hari, jeda waktu setelah mandi</li>
+            <li>Minimal 2 minggu, jeda waktu pasca sakit</li>
+            <li>Harap membawa fotocopy KTP</li>
+          </ol>
         </div>
       </div>
+    </div>
     </div>
   );
 };
@@ -142,13 +142,13 @@ const LayananCard = ({
   }, [hewan]);
 
   return (
-    <div className="w-[320px] h-[432px] flex flex-col rounded-2xl shadow-300 hover:-translate-y-2 transition duration-300 cursor-pointer font-inter">
+    <div className="w-full md:w-[320px] h-auto md:h-[432px] flex flex-col rounded-2xl shadow-300 hover:-translate-y-2 transition duration-300 cursor-pointer font-inter">
       <div className="w-full h-[49px] flex items-center justify-between px-4">
         <h1 className="text-[14px]">{jenis}</h1>
         <h1 className="text-[14px]">{layanan}</h1>
       </div>
       <div className="w-full h-[180px]">
-        <img src={img} alt="" />
+        <img src={img} alt="" className="w-full h-full object-cover" />
       </div>
       <div className="w-full h-[131px] py-4 px-4">
         <h1 className="text-[18px] font-semibold">{namaLayanan}</h1>
@@ -201,19 +201,18 @@ const OtherServicesSection = () => {
   };
 
   return (
-    <section className="mt-8 w-[1288px] flex flex-col gap-4">
+    <section className="mt-8 w-full md:w-[1288px] flex flex-col gap-4 mx-auto px-4">
       <PopUpDetailLayanan
         {...popUpDetailLayananData}
         popUpClick={handleClickPopUpDetailLayanan}
         isOpen={popPopUpDetailLayanan}
       />
       <div>
-        {" "}
         <h1 className="font-semibold text-[30px]">Layanan lainnya</h1>
         <div className="w-[64px] h-[4px] bg-[#D9D9D9] mt-4"></div>
       </div>
-      <div className="flex gap-8">
-        <div className="flex flex-col gap-4 w-[256px]">
+      <div className="flex flex-col gap-8 md:flex-row md:gap-4">
+        <div className="flex flex-col gap-4 md:w-[256px]">
           <div className="flex flex-col">
             <h1 className="font-semibold">Jenis layanan</h1>
             <div className="flex flex-col gap-2 mt-2">
@@ -359,7 +358,7 @@ const OtherServicesSection = () => {
             </div>
           </div>
         </div>
-        <div className="w-[1000px] grid grid-cols-3 gap-5">
+        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-5">
           <LayananCard
             img="/images/ServicesPage/layanan-1.png"
             jenis="Vaksinasi"
