@@ -1,5 +1,5 @@
 import Footer from "../../Fragments/Footer/Footer";
-import { NavbarLogin } from "../../Fragments/Navbar/Navbar";
+import { Navbar } from "../../Fragments/Navbar/Navbar";
 
 const AboutPage = () => {
   const headerAbout = "/images/AboutPage/header_about.png";
@@ -15,7 +15,7 @@ const AboutPage = () => {
 
   return (
     <>
-      <NavbarLogin />
+      <Navbar />
       <div>
         <div className="bg-white w-full py-10 md:py-20 lg:py-32 px-4 md:px-8 lg:px-16 xl:px-20 flex flex-col justify-between items-center gap-10">
           <div className="container mx-auto">

@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
-import { NavbarLogin } from "../../Fragments/Navbar/Navbar";
+import { Navbar } from "../../Fragments/Navbar/Navbar";
 import Footer from "../../Fragments/Footer/Footer";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PropTypes from "prop-types";
 import { useState } from "react";
-
 
 const PopUpAdopsi = ({ onClickChange, isOpen }) => {
   const handleChange = () => {
@@ -72,7 +71,7 @@ const HomePage = () => {
 
   return (
     <>
-      <NavbarLogin />
+      <Navbar />
       <div>
         <div className="bg-[#8DD67A] w-full py-12 md:py-24 px-6 md:px-12 lg:px-20 flex flex-col md:flex-row justify-between items-center gap-10">
           <PopUpAdopsi onClickChange={handlePopUpAdopsi} isOpen={popUpAdopsi} />
@@ -89,8 +88,8 @@ const HomePage = () => {
             <button
               onClick={handlePopUpAdopsi}
               className="w-full md:w-[150px] h-fit py-[10px] bg-[#FA9F42] rounded-2xl font-semibold mt-4 text-xl"
-              >
-                Adopsi
+            >
+              Adopsi
             </button>
           </div>
           <img
