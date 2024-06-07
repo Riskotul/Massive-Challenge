@@ -53,7 +53,7 @@ PopUpAdopsi.propTypes = {
 };
 
 const HomePage = () => {
-  const headerImage = "/images/HomePage/header_homelogin.png";
+  const headerImage = "/images/HomePage/header_masuk.png";
   const animalRescueImage = "/images/HomePage/animal_resque.png";
   const rescuersListedImage = "/images/HomePage/rescuers_listed.png";
   const animalHousesImage = "/images/HomePage/animal_houses.png";
@@ -76,10 +76,10 @@ const HomePage = () => {
         <div className="bg-[#8DD67A] w-full py-12 md:py-24 px-6 md:px-12 lg:px-20 flex flex-col md:flex-row justify-between items-center gap-10">
           <PopUpAdopsi onClickChange={handlePopUpAdopsi} isOpen={popUpAdopsi} />
           <div className="flex-1 text-center md:text-left">
-            <h1 className="text-2xl md:text-4xl lg:text-4xl mb-4 md:mb-8 font-bold">
+            <h1 className="text-5xl md:text-4xl lg:text-7xl mb-4 md:mb-8 font-bold">
               Heywani
             </h1>
-            <p className="text-lg md:text-xl lg:text-2xl mb-4 md:mb-8">
+            <p className="text-xl md:text-2xl lg:text-3xl mb-4 md:mb-8">
               Selamatkan, adopsi, dan cintai hewan-hewan terlantar bersama kami.
               Jadilah bagian dari perubahan dan berikan mereka rumah penuh
               kasih. Mari bersama-sama menciptakan dunia yang lebih baik untuk
@@ -87,7 +87,7 @@ const HomePage = () => {
             </p>
             <button
               onClick={handlePopUpAdopsi}
-              className="w-full md:w-[150px] h-fit py-[10px] bg-[#FA9F42] rounded-2xl font-semibold mt-4 text-xl"
+              className="w-full md:w-[200px] h-fit py-[10px] bg-[#FA9F42] rounded-2xl font-semibold mt-4 text-4xl"
             >
               Adopsi
             </button>
@@ -96,7 +96,7 @@ const HomePage = () => {
             src={headerImage}
             alt="Deskripsi gambar"
             className="w-full md:w-auto h-[320px] md:h-auto"
-            style={{ maxWidth: "700px" }}
+            style={{ maxWidth: "900px" }}
           />
         </div>
 
@@ -166,19 +166,20 @@ const HomePage = () => {
             src={headerBeranda}
             alt="Deskripsi gambar"
             className="w-full md:w-1/2 h-auto"
+            style={{ maxWidth: "800px" }}
           />
           <div className="flex-1 py-12 px-6 md:py-20 md:px-20 text-center md:text-left">
-            <h1 className="text-xl md:text-2xl mb-6 md:mb-12 font-bold">
+            <h1 className="text-2xl md:text-4xl mb-6 md:mb-12 font-bold">
               “Temukan cara Anda agar dapat ikut berperan dalam menyelamatkan
               dan memberikan dukungan bagi hewan di Heywani.”
             </h1>
             <div className="flex flex-col md:flex-row justify-center md:justify-start items-center md:items-start">
-              <button className="bg-[#FA9F42] border-none text-black py-2 px-4 md:py-2 md:px-6 cursor-pointer rounded-xl text-lg md:text-xl mt-2 md:mt-4 md:mr-4">
+              <button className="bg-[#FA9F42] border-none text-black py-2 px-4 md:py-2 md:px-6 cursor-pointer rounded-xl text-xl md:text-2xl mt-2 md:mt-4 md:mr-4">
                 <Link to="/donation" className="no-underline text-black">
                   Donasi
                 </Link>
               </button>
-              <button className="bg-[#FA9F42] border-none text-black py-2 px-4 md:py-2 md:px-6 cursor-pointer rounded-xl text-lg md:text-xl mt-2 md:mt-4">
+              <button className="bg-[#FA9F42] border-none text-black py-2 px-4 md:py-2 md:px-6 cursor-pointer rounded-xl text-xl md:text-2xl mt-2 md:mt-4">
                 <Link to="/contact" className="no-underline text-black">
                   Evakuasi Hewan
                 </Link>

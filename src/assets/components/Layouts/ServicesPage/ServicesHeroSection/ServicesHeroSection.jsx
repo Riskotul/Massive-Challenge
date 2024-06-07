@@ -64,12 +64,12 @@ const ServicesHeroSection = () => {
         <h1 className="text-[24px] md:text-[36px] font-bold">
           Hey! Ayo adopsi calon peliharaanmu sekarang
         </h1>
-        <h2 className="text-base md:text-lg">
+        <h2 className="text-xl md:text-2xl">
           Cari dan temukan teman untuk dibawa pulang ke rumah sekarang juga
         </h2>
         <button
           onClick={handlePopUpAdopsi}
-          className="w-full md:w-[87px] h-fit py-[10px] bg-white rounded-lg font-semibold mt-4"
+          className="w-full md:w-[200px] h-fit py-[10px] bg-white rounded-lg font-semibold text-2xl mt-4"
         >
           Adopsi
         </button>

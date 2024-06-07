@@ -22,7 +22,7 @@ const AboutPage = () => {
             <div className="main-content flex flex-col lg:flex-row items-center gap-10">
               <div className="content flex-1 mt-10 lg:mt-0">
                 <h1 className="text-4xl font-bold mb-12">Tentang Kami</h1>
-                <p className="text-lg leading-7">
+                <p className="text-xl leading-7">
                   Kami berkomitmen untuk menyelamatkan, merawat, dan mencarikan
                   rumah baru bagi hewan-hewan terlantar di Pulau Jawa. Melalui
                   program adopsi yang bertanggung jawab, kami berusaha
@@ -50,59 +50,59 @@ const AboutPage = () => {
             </h1>
             <div className="tim-kami flex flex-wrap justify-center">
               <div className="item text-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex flex-col items-center">
-                <div className="image-container w-[200px] h-[200px] overflow-hidden rounded-full mb-4">
+                <div className="image-container w-[250px] h-[250px] overflow-hidden rounded-full mb-4">
                   <img
                     src={teamImage1}
                     alt="Yezika Rachman"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <p className="text-2xl font-bold">Yezika Rachman</p>
-                <span className="text-lg">Product Manager</span>
+                <p className="text-3xl font-bold">Yezika Rachman</p>
+                <span className="text-xl">Product Manager</span>
               </div>
               <div className="item text-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex flex-col items-center">
-                <div className="image-container w-[200px] h-[200px] overflow-hidden rounded-full mb-4">
+                <div className="image-container w-[250px] h-[250px] overflow-hidden rounded-full mb-4">
                   <img
                     src={teamImage2}
                     alt="Eka Kurnia F"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <p className="text-2xl font-bold">Eka Kurnia F</p>
-                <span className="text-lg">Product Designer</span>
+                <p className="text-3xl font-bold">Eka Kurnia F</p>
+                <span className="text-xl">Product Designer</span>
               </div>
               <div className="item text-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex flex-col items-center">
-                <div className="image-container w-[200px] h-[200px] overflow-hidden rounded-full mb-4">
+                <div className="image-container w-[250px] h-[250px] overflow-hidden rounded-full mb-4">
                   <img
                     src={teamImage3}
                     alt="Novi Indah P.S"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <p className="text-2xl font-bold">Novi Indah P.S</p>
-                <span className="text-lg">Product Designer</span>
+                <p className="text-3xl font-bold">Novi Indah P.S</p>
+                <span className="text-xl">Product Designer</span>
               </div>
               <div className="item text-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex flex-col items-center">
-                <div className="image-container w-[200px] h-[200px] overflow-hidden rounded-full mb-4">
+                <div className="image-container w-[250px] h-[250px] overflow-hidden rounded-full mb-4">
                   <img
                     src={teamImage4}
                     alt="Riskotul M"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <p className="text-2xl font-bold">Riskotul M</p>
-                <span className="text-lg">Programmer</span>
+                <p className="text-3xl font-bold">Riskotul M</p>
+                <span className="text-xl">Programmer</span>
               </div>
               <div className="item text-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex flex-col items-center">
-                <div className="image-container w-[200px] h-[200px] overflow-hidden rounded-full mb-4">
+                <div className="image-container w-[250px] h-[250px] overflow-hidden rounded-full mb-4">
                   <img
                     src={teamImage5}
                     alt="Akhiratul Akmal A"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <p className="text-2xl font-bold">Akhiratul Akmal A</p>
-                <span className="text-lg">Programmer</span>
+                <p className="text-3xl font-bold">Akhiratul Akmal A</p>
+                <span className="text-xl">Programmer</span>
               </div>
             </div>
 
