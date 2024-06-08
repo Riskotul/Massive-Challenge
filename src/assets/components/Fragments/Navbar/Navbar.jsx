@@ -43,7 +43,7 @@ export const Navbar = () => {
     }
   };
   return (
-    <nav className="flex flex-col lg:flex-row h-auto lg:h-[97px] w-full items-center justify-between px-6 lg:px-12 py-4 lg:py-0 bg-white shadow-md">
+    <nav className="flex lg:fixed top-0 z-50 flex-col lg:flex-row h-auto lg:h-[97px] w-full items-center justify-between px-6 lg:px-12 py-4 lg:py-0 bg-white shadow-md">
       <img
         src="/images/app-logo-m.png"
         alt="Logo"

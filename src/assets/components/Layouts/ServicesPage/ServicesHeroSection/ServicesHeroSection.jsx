@@ -58,7 +58,7 @@ const ServicesHeroSection = () => {
   };
 
   return (
-    <div className="w-full max-w-[1288px] h-auto md:h-[468px] rounded-[32px] bg-[#8DD67A] flex flex-col md:flex-row items-center gap-[32px] md:gap-[64px] p-4 md:pl-[64px] mx-auto">
+    <div className="w-full max-w-[1288px] h-auto md:h-[468px] rounded-[32px] bg-[#8DD67A] flex flex-col md:flex-row items-center gap-[32px] md:gap-[64px] p-4 md:pl-[64px] mx-auto mt-20">
       <PopUpAdopsi onClickChange={handlePopUpAdopsi} isOpen={popUpAdopsi} />
       <div className="flex flex-col max-w-full md:max-w-[516px] gap-4 text-center md:text-left">
         <h1 className="text-[24px] md:text-[36px] font-bold">

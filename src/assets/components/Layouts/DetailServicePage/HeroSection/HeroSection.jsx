@@ -2,7 +2,7 @@ import React from 'react';
 
 const HeroSection = () => {
   return (
-    <section className="w-full h-auto bg-[#8DD67A] flex flex-col lg:flex-row gap-6 lg:gap-[100px] px-6 lg:pl-[112px] py-8">
+    <section className="w-full h-auto bg-[#8DD67A] flex flex-col lg:flex-row gap-6 lg:gap-[100px] px-6 lg:pl-[112px] py-8 mt-20">
       <div className="lg:max-w-[608px] text-center lg:text-left mt-10">
         <p className="text-[26px] lg:text-[33px] font-bold mb-4 lg:mb-8">
           Ayo, adopsi sekarang di Heywani!

@@ -17,7 +17,7 @@ const AboutPage = () => {
     <>
       <Navbar />
       <div>
-        <div className="bg-white w-full py-10 md:py-20 lg:py-32 px-4 md:px-8 lg:px-16 xl:px-20 flex flex-col justify-between items-center gap-10">
+        <div className="bg-white w-full py-10 md:py-20 lg:py-32 px-4 md:px-8 lg:px-16 xl:px-20 flex flex-col justify-between items-center gap-10 mt-20">
           <div className="container mx-auto">
             <div className="main-content flex flex-col lg:flex-row items-center gap-10">
               <div className="content flex-1 mt-10 lg:mt-0">
