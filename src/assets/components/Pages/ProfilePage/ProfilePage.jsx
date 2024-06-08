@@ -1,10 +1,13 @@
-import { useState } from "react";
 import Footer from "../../Fragments/Footer/Footer";
-import { NavbarLogin } from "../../Fragments/Navbar/Navbar";
+import { Navbar } from "../../Fragments/Navbar/Navbar";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 const ProfilePage = () => {
   const profilePicture = "/images/ProfilePage/foto_profil.png";
+  const navigate = useNavigate();
 
   const [profileImage, setProfilImage] = useState(profilePicture);
 
@@ -19,9 +22,61 @@ const ProfilePage = () => {
     }
   };
 
+  const handleLogout = async () => {
+    try {
+      const response = await axios.delete("http://localhost:5000/logout");
+      localStorage.clear();
+      navigate("/login");
+    } catch (error) {
+      if (error.response) {
+        setMsg(error.response.data.msg);
+      }
+    }
+  };
+
+  useEffect(() => {
+    refreshToken();
+  }, []);
+
+  // Decoded Token
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [isToken, setToken] = useState(false);
+  function parseJwt(token) {
+    var base64Url = token.split(".")[1];
+    var base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+    var jsonPayload = decodeURIComponent(
+      window
+        .atob(base64)
+        .split("")
+        .map(function (c) {
+          return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
+        })
+        .join("")
+    );
+
+    return JSON.parse(jsonPayload);
+  }
+
+  const refreshToken = () => {
+    try {
+      const tokenStorage = localStorage.getItem("token");
+      if (tokenStorage) {
+        setToken(true);
+      } else {
+        setToken(false);
+      }
+      const decoded = parseJwt(tokenStorage);
+      setName(decoded.name);
+      setEmail(decoded.email);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <>
-      <NavbarLogin />
+      <Navbar />
       <div>
         <div className="bg-white rounded-lg shadow-lg p-8 mt-6 max-w-7xl w-full mx-auto">
           <div className="flex items-center border border-black rounded-lg p-4 mb-8 relative gap-12">
@@ -42,7 +97,7 @@ const ProfilePage = () => {
             />
             <div className="flex-grow">
               <h2 className="text-lg font-semibold">Hai</h2>
-              <p className="text-black text-xl font-bold">Dimas Rahmatullah</p>
+              <p className="text-black text-xl font-bold">{name}</p>
             </div>
           </div>
           <div className="border border-black rounded-lg p-8 relative gap-12">
@@ -59,7 +114,7 @@ const ProfilePage = () => {
                   className="p-2 border border-black rounded-md text-gray-700"
                   type="text"
                   id="name"
-                  defaultValue="Dimas Rahmatullah"
+                  defaultValue={name}
                   readOnly
                 />
               </div>
@@ -95,7 +150,7 @@ const ProfilePage = () => {
                   className="p-2 border border-black rounded-md text-gray-700"
                   type="email"
                   id="email"
-                  defaultValue="dimas@gmail.com"
+                  defaultValue={email}
                   readOnly
                 />
               </div>
@@ -151,9 +206,10 @@ const ProfilePage = () => {
           </div>
           <button
             type="button"
+            onClick={handleLogout}
             className="bg-red-600 text-white py-2 px-4 rounded-xl col-span-1 md:col-span-2 justify-self-center mt-10"
           >
-            <Link to="/popuplogout">Keluar</Link>
+            Keluar
           </button>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Footer from "../../Fragments/Footer/Footer";
-import { NavbarLogin } from "../../Fragments/Navbar/Navbar";
+import { Navbar } from "../../Fragments/Navbar/Navbar";
 import { Link } from "react-router-dom";
 
 const EditProfilePage = () => {
@@ -21,7 +21,7 @@ const EditProfilePage = () => {
 
   return (
     <>
-      <NavbarLogin />
+      <Navbar />
       <div>
         <div className="bg-white rounded-lg shadow-lg p-8 mt-6 max-w-7xl w-full mx-auto">
           <div className="flex items-center border border-black rounded-lg p-4 mb-8 relative gap-12">

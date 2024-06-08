@@ -1,6 +1,6 @@
 const FormSection = () => {
   return (
-    <section className="mt-[49px] flex flex-col gap-[49px] mb-[31px]">
+    <section className="mt-[49px] flex flex-col gap-[49px] mb-20">
       <h1 className="text-[36px] font-bold">
         Kami Siap Membantu Anda Kirimkan Pesan Kepada Kami!{" "}
       </h1>

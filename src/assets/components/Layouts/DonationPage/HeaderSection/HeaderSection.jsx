@@ -1,7 +1,7 @@
 const HeaderSection = () => {
   return (
     <section>
-      <div class="flex flex-col items-center px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col items-center px-4 sm:px-6 lg:px-8 mt-20">
         <h1 className="text-[24px] sm:text-[28px] lg:text-[32px] font-semibold text-center mt-8">
           Mari ikut berkontribusi untuk dunia yang lebih baik bagi hewan!
         </h1>

@@ -1,5 +1,5 @@
 import Footer from "../../Fragments/Footer/Footer";
-import { NavbarLogin } from "../../Fragments/Navbar/Navbar";
+import { Navbar } from "../../Fragments/Navbar/Navbar";
 import BodyDetailSection from "../../Layouts/DetailServicePage/BodyDetailSection/BodyDetailSection";
 import BodyDetailSectionAnjing from "../../Layouts/DetailServicePage/BodyDetailSection/BodyDetailSectionAnjing";
 import HeaderDetailSection from "../../Layouts/DetailServicePage/HeaderDetailSection/HeaderDetailSection";
@@ -10,7 +10,7 @@ const DetailServicePageAnjing = () => {
   return (
     <>
       {" "}
-      <NavbarLogin />
+      <Navbar />
       <main className="flex flex-col items-center w-full mb-[60px]">
         <HeroSection />
         <HeaderDetailSectionAnjing />

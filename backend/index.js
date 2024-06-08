@@ -14,7 +14,14 @@ dotenv.config();
 //   await db.sync();
 // })();
 
-app.use(cors());
+try {
+  await db.authenticate();
+  console.log(`Database Connected...`);
+} catch (error) {
+  console.log(error);
+}
+
+app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
 app.use(cookieParser());
 app.use(express.json());
 app.use(KucingRoute);
@@ -22,6 +29,6 @@ app.use(AnjingRoute);
 app.use(UserRoute);
 app.use(AuthRoute);
 
-app.listen(process.env.APP_PORT, () => {
-  console.log(`Server up and running...` + process.env.APP_PORT);
+app.listen(5000, () => {
+  console.log(`Server up and running...` + 5000);
 });
