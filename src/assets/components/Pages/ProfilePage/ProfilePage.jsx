@@ -26,7 +26,7 @@ const ProfilePage = () => {
     try {
       const response = await axios.delete("http://localhost:5000/logout");
       localStorage.clear();
-      navigate("/login");
+      navigate("/home");
     } catch (error) {
       if (error.response) {
         setMsg(error.response.data.msg);
@@ -126,7 +126,6 @@ const ProfilePage = () => {
                   className="p-2 border border-black rounded-md text-gray-700"
                   type="text"
                   id="job"
-                  defaultValue="Staff Tata Usaha"
                   readOnly
                 />
               </div>
@@ -138,7 +137,6 @@ const ProfilePage = () => {
                   className="p-2 border border-black rounded-md text-gray-700"
                   type="text"
                   id="gender"
-                  defaultValue="Laki-Laki"
                   readOnly
                 />
               </div>
@@ -162,7 +160,6 @@ const ProfilePage = () => {
                   className="p-2 border border-black rounded-md text-gray-700"
                   type="text"
                   id="birthdate"
-                  defaultValue="14-01-2000"
                   readOnly
                 />
               </div>
@@ -174,7 +171,6 @@ const ProfilePage = () => {
                   className="p-2 border border-black rounded-md text-gray-700"
                   type="tel"
                   id="phone"
-                  defaultValue="0853648293756"
                   readOnly
                 />
               </div>
@@ -186,19 +182,6 @@ const ProfilePage = () => {
                   className="p-2 border border-black rounded-md text-gray-700"
                   type="text"
                   id="address"
-                  defaultValue="Jl. Dr. Setiabudi No.229, Isola, Kec. Sukasari, Kota Bandung"
-                  readOnly
-                />
-              </div>
-              <div className="form-group flex flex-col ">
-                <label className="text-gray-600 mb-2" htmlFor="password">
-                  Kata Sandi
-                </label>
-                <input
-                  className="p-2 border border-black rounded-md text-gray-700"
-                  type="password"
-                  id="password"
-                  defaultValue="*********"
                   readOnly
                 />
               </div>
