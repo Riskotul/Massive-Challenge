@@ -121,16 +121,6 @@ const EditProfilePage = () => {
                   id="address"
                 />
               </div>
-              <div className="form-group flex flex-col ">
-                <label className="text-gray-600 mb-2" htmlFor="password">
-                  Kata Sandi
-                </label>
-                <input
-                  className="p-2 border border-black rounded-md text-gray-700"
-                  type="password"
-                  id="password"
-                />
-              </div>
             </form>
           </div>
         </div>
