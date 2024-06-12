@@ -100,7 +100,7 @@ const AdopsiAnjingPage = () => {
                   </p>
                   <button
                     onClick={handleClickNavigate}
-                    className="bg-[#FA9F42] text-white py-2 px-8 rounded-[32px] shadow-xl mt-3"
+                    className="bg-[#FA9F42] text-white font-semibold py-2 px-8 rounded-[32px] shadow-xl mt-3"
                   >
                     Lihat
                   </button>
@@ -130,7 +130,7 @@ const AdopsiAnjingPage = () => {
                   </p>
                   <button
                     onClick={handleClickNavigate}
-                    className="bg-[#FA9F42] text-white py-2 px-8 rounded-[32px] shadow-xl mt-3"
+                    className="bg-[#FA9F42] text-white font-semibold py-2 px-8 rounded-[32px] shadow-xl mt-3"
                   >
                     Lihat
                   </button>

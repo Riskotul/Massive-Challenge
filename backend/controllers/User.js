@@ -30,9 +30,7 @@ export const getUserById = async (req, res) => {
 export const createUser = async (req, res) => {
   const { name, email, password, confPassword } = req.body;
   if (password !== confPassword)
-    return res
-      .status(400)
-      .json({ msg: "Password dan Confirm Password tidak cocok!" });
+    return res.status(400).json({ msg: "Konfirmasi Kata Sandi tidak cocok!" });
   const salt = await bcrypt.genSalt();
   const hashPassword = await bcrypt.hash(password, salt);
   try {
@@ -60,7 +58,7 @@ export const updateUser = async (req, res) => {
       if (password !== confPassword)
         return res
           .status(400)
-          .json({ msg: "Password dan Confirm Password tidak cocok!" });
+          .json({ msg: "Konfirmasi Kata Sandi tidak cocok!" });
       const salt = await bcrypt.genSalt();
       hashPassword = await bcrypt.hash(password, salt);
     }

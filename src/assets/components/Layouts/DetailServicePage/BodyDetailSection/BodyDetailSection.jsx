@@ -26,7 +26,7 @@ const BodyDetailSection = () => {
       </p>
       <button
         onClick={() => navigate("/form-adopsi")}
-        className="min-w-[200px] w-full md:w-auto px-8 py-3 rounded-[32px] text-white bg-[#FA9F42] text-lg md:text-xl font-medium"
+        className="min-w-[200px] w-full md:w-auto px-8 py-3 rounded-[32px] text-white bg-[#FA9F42] text-lg md:text-xl font-semibold"
       >
         Adopsi
       </button>

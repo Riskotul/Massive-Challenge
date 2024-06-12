@@ -43,6 +43,10 @@ const ProfilePage = React.lazy(() =>
 const EditProfilePage = React.lazy(() =>
   import("../components/Pages/EditProfilePage/EditProfilePage")
 );
+const ProfilePages = React.lazy(() =>
+  import("../components/Pages/EditProfilePage/ProfilePages")
+);
+
 const FormAdopsiPage = React.lazy(() =>
   import("../components/Pages/FormAdopsiPage/FormAdopsiPage")
 );
@@ -72,6 +76,7 @@ const ProjectRoutes = () => {
           <Route path="/adopsi-anjing" element={<AdopsiAnjingPage />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/edit-profile" element={<EditProfilePage />} />
+          <Route path="/profiles" element={<ProfilePages />} />
           <Route path="/form-adopsi" element={<FormAdopsiPage />} />
         </Routes>
       </Router>

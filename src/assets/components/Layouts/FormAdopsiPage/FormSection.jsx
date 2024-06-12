@@ -359,7 +359,7 @@ const FormSection = () => {
       <button
         type="submit"
         onClick={handlePopUp}
-        className="size-fit px-[40px] lg:px-[52px] py-3 bg-[#FA9F42] rounded-lg text-white text-[20px] lg:text-[24px] font-medium mt-10 mb-10"
+        className="size-fit px-[40px] lg:px-[52px] py-3 bg-[#FA9F42] rounded-[32px] text-white text-[20px] lg:text-[24px] font-semibold mt-10 mb-10"
       >
         Kirim
       </button>

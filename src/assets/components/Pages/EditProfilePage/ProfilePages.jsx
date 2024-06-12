@@ -180,6 +180,7 @@ const ProfilePage = () => {
                   className="p-2 border border-black rounded-md text-gray-700"
                   type="text"
                   id="job"
+                  value="Mahasiswa"
                   readOnly
                 />
               </div>
@@ -191,6 +192,7 @@ const ProfilePage = () => {
                   className="p-2 border border-black rounded-md text-gray-700"
                   type="text"
                   id="gender"
+                  value="Laki-Laki"
                   readOnly
                 />
               </div>
@@ -214,6 +216,7 @@ const ProfilePage = () => {
                   className="p-2 border border-black rounded-md text-gray-700"
                   type="text"
                   id="birthdate"
+                  value="13/06/2024"
                   readOnly
                 />
               </div>
@@ -225,6 +228,7 @@ const ProfilePage = () => {
                   className="p-2 border border-black rounded-md text-gray-700"
                   type="tel"
                   id="phone"
+                  value="081122334455"
                   readOnly
                 />
               </div>
@@ -236,6 +240,7 @@ const ProfilePage = () => {
                   className="p-2 border border-black rounded-md text-gray-700"
                   type="text"
                   id="address"
+                  value="Bandung"
                   readOnly
                 />
               </div>

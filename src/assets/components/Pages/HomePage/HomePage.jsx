@@ -87,7 +87,7 @@ const HomePage = () => {
             </p>
             <button
               onClick={handlePopUpAdopsi}
-              className="w-full md:w-[150px] h-fit py-[10px] bg-[#FA9F42] rounded-[32px] font-bold mt-4 text-xl "
+              className="w-full md:w-[150px] h-fit py-[10px] bg-[#FA9F42] rounded-[32px] font-semibold mt-4 text-xl"
             >
               Adopsi
             </button>
@@ -177,7 +177,7 @@ const HomePage = () => {
               <button className="bg-[#FA9F42] border-none text-black py-2 px-4 md:py-2 md:px-6 cursor-pointer rounded-[32px] text-lg md:text-xl mt-2 md:mt-4 md:mr-4">
                 <Link
                   to="/donation"
-                  className="no-underline text-black font-bold"
+                  className="no-underline text-black font-semibold"
                 >
                   Donasi
                 </Link>
@@ -185,7 +185,7 @@ const HomePage = () => {
               <button className="bg-[#FA9F42] border-none text-black py-2 px-4 md:py-2 md:px-6 cursor-pointer rounded-[32px] text-lg md:text-xl mt-2 md:mt-4">
                 <Link
                   to="/contact"
-                  className="no-underline text-black font-bold"
+                  className="no-underline text-black font-semibold"
                 >
                   Evakuasi Hewan
                 </Link>
