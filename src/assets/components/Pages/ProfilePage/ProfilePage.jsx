@@ -1,13 +1,75 @@
 import Footer from "../../Fragments/Footer/Footer";
 import { Navbar } from "../../Fragments/Navbar/Navbar";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
+const handleLogout = async (navigate, setMsg) => {
+  try {
+    await axios.delete("http://localhost:5000/logout");
+    localStorage.clear();
+    navigate("/home");
+  } catch (error) {
+    if (error.response) {
+      setMsg(error.response.data.msg);
+    }
+  }
+};
+
+const PopUpTerkirim = ({ isPopUpOpen, handlePopUp, handleLogout }) => {
+  return (
+    <div
+      className={
+        isPopUpOpen
+          ? "fixed inset-0 z-[60] items-center justify-center backdrop-filter backdrop-brightness-[.7] backdrop-blur-sm flex"
+          : "fixed inset-0 z-[60] items-center justify-center backdrop-filter backdrop-brightness-[.7] backdrop-blur-sm hidden"
+      }
+    >
+      <div className="w-[90%] max-w-[400px] h-[480px] rounded-[20px] bg-white relative border">
+        <div className="w-[180px] h-[180px] rounded-full bg-[#FA4242] absolute -top-[95px] left-1/2 transform -translate-x-1/2 flex justify-center items-center">
+          <img src="/images/ProfilePage/!.png" alt="" />
+        </div>
+        <div className="mt-[120px] w-full flex flex-col items-center gap-4">
+          <h1 className="text-[36px] lg:text-[48px] font-bold">Perhatian</h1>
+          <div className="flex flex-col px-4">
+            <p className="text-[18px] lg:text-[20px] font-medium text-center mt-2">
+              Apakah anda yakin ingin keluar!
+            </p>
+          </div>
+          <button
+            onClick={handleLogout}
+            className="size-fit px-[40px] lg:px-[52px] py-3 bg-[#FA4242] rounded-lg text-white text-[20px] lg:text-[24px] font-medium mt-8"
+          >
+            Keluar
+          </button>
+          <button
+            onClick={handlePopUp}
+            className="size-fit px-[30px] lg:px-[41px] py-3 bg-[#FA9F42] rounded-lg text-white text-[20px] lg:text-[24px] font-medium"
+          >
+            Kembali
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+PopUpTerkirim.propTypes = {
+  isPopUpOpen: PropTypes.bool.isRequired,
+  handlePopUp: PropTypes.func.isRequired,
+  handleLogout: PropTypes.func.isRequired,
+};
+
 const ProfilePage = () => {
+  const [isPopOpen, setIsPopOpen] = useState(false);
   const profilePicture = "/images/ProfilePage/foto_profil.png";
   const navigate = useNavigate();
+
+  const handlePopUp = () => {
+    setIsPopOpen(!isPopOpen);
+  };
 
   const [profileImage, setProfileImage] = useState(profilePicture);
   const [name, setName] = useState("");
@@ -28,18 +90,6 @@ const ProfilePage = () => {
         setProfileImage(e.target.result);
       };
       reader.readAsDataURL(file);
-    }
-  };
-
-  const handleLogout = async () => {
-    try {
-      const response = await axios.delete("http://localhost:5000/logout");
-      localStorage.clear();
-      navigate("/home");
-    } catch (error) {
-      if (error.response) {
-        setMsg(error.response.data.msg);
-      }
     }
   };
 
@@ -100,6 +150,11 @@ const ProfilePage = () => {
 
   return (
     <>
+      <PopUpTerkirim
+        isPopUpOpen={isPopOpen}
+        handlePopUp={handlePopUp}
+        handleLogout={() => handleLogout(navigate, setMsg)}
+      />
       <Navbar />
       <div>
         <div className="bg-white rounded-lg shadow-lg p-8 max-w-7xl w-full mx-auto mt-40 mb-20">
@@ -219,7 +274,7 @@ const ProfilePage = () => {
           </div>
           <button
             type="button"
-            onClick={handleLogout}
+            onClick={handlePopUp}
             className="bg-red-600 text-white py-2 px-4 rounded-xl col-span-1 md:col-span-2 justify-self-center mt-10"
           >
             Keluar
