@@ -45,11 +45,7 @@ const PopUpDetailLayanan = ({
           className="absolute cursor-pointer top-8 right-10 size-6"
           onClick={handleChange}
         />
-        <img
-        src={img}
-        alt=""
-        className="max-w-full h-[200px] object-contain"
-        />
+        <img src={img} alt="" className="max-w-full h-[200px] object-contain" />
         <div className="w-full h-[49px] flex py-4 justify-between px-[45px]">
           <h1 className="text-[14px]">{jenis}</h1>
           <h1 className="text-[14px]">{layanan}</h1>
@@ -57,49 +53,49 @@ const PopUpDetailLayanan = ({
         <div className="w-full py-2 px-[45px] flex flex-col md:flex-row justify-between">
           <div className="w-full md:w-[60%] h-auto">
             <h1 className="text-[18px] font-semibold">{namaLayanan}</h1>
-          <div className="flex items-center gap-2 mt-1">
-            <img
-              src="/images/ServicesPage/service-date-icon.png"
-              alt=""
-              className="size-5"
-            />
-            <h1 className="text-[14px]">{jadwal}</h1>
+            <div className="flex items-center gap-2 mt-1">
+              <img
+                src="/images/ServicesPage/service-date-icon.png"
+                alt=""
+                className="size-5"
+              />
+              <h1 className="text-[14px]">{jadwal}</h1>
+            </div>
+            <div className="flex items-center gap-2 mt-2">
+              <img
+                src="/images/ServicesPage/service-map-icon.png"
+                alt=""
+                className="size-5"
+              />
+              <h1 className="text-[14px]">{lokasi}</h1>
+            </div>
+            <div className="flex items-center gap-3 mt-5">
+              {jenisHewan.map((hewan, index) => (
+                <h1
+                  key={index}
+                  className="text-[14px] size-fit px-2 py-1 rounded-full bg-[#E7E7E7]"
+                >
+                  {hewan}
+                </h1>
+              ))}
+            </div>
+            <button className="font-bold size-fit px-4 py-[10px] rounded-[32px] bg-[#FA9F42] text-white mt-4">
+              Daftar sekarang
+            </button>
           </div>
-          <div className="flex items-center gap-2 mt-2">
-            <img
-              src="/images/ServicesPage/service-map-icon.png"
-              alt=""
-              className="size-5"
-            />
-            <h1 className="text-[14px]">{lokasi}</h1>
+          <div className="flex flex-col w-full md:w-[40%] gap-1 mt-4 md:mt-0">
+            <h1 className="text-[18px] font-semibold">Syarat & Ketentuan</h1>
+            <ol className="ml-5 list-decimal">
+              <li>Domisili Kota Bekasi</li>
+              <li>Usia hewan minimal 6 bulan</li>
+              <li>Dalam keadaan sehat</li>
+              <li>Minimal 3 hari, jeda waktu setelah mandi</li>
+              <li>Minimal 2 minggu, jeda waktu pasca sakit</li>
+              <li>Harap membawa fotocopy KTP</li>
+            </ol>
           </div>
-          <div className="flex items-center gap-3 mt-5">
-            {jenisHewan.map((hewan, index) => (
-              <h1
-                key={index}
-                className="text-[14px] size-fit px-2 py-1 rounded-full bg-[#E7E7E7]"
-              >
-                {hewan}
-              </h1>
-            ))}
-          </div>
-          <button className="font-bold size-fit px-4 py-[10px] rounded-lg bg-[#FA9F42] text-white mt-4">
-            Daftar sekarang
-          </button>
-        </div>
-        <div className="flex flex-col w-full md:w-[40%] gap-1 mt-4 md:mt-0">
-          <h1 className="text-[18px] font-semibold">Syarat & Ketentuan</h1>
-          <ol className="ml-5 list-decimal">
-            <li>Domisili Kota Bekasi</li>
-            <li>Usia hewan minimal 6 bulan</li>
-            <li>Dalam keadaan sehat</li>
-            <li>Minimal 3 hari, jeda waktu setelah mandi</li>
-            <li>Minimal 2 minggu, jeda waktu pasca sakit</li>
-            <li>Harap membawa fotocopy KTP</li>
-          </ol>
         </div>
       </div>
-    </div>
     </div>
   );
 };

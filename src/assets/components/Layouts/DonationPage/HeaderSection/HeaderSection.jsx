@@ -2,10 +2,10 @@ const HeaderSection = () => {
   return (
     <section>
       <div class="flex flex-col items-center px-4 sm:px-6 lg:px-8 mt-20">
-        <h1 className="text-[24px] sm:text-[28px] lg:text-[32px] font-semibold text-center mt-8">
+        <h1 className="text-[24px] sm:text-[28px] lg:text-[32px] font-semibold text-center mt-10">
           Mari ikut berkontribusi untuk dunia yang lebih baik bagi hewan!
         </h1>
-        <p className="text-[16px] sm:text-[18px] lg:text-[20px] font-medium max-w-full lg:max-w-[1115px] mt-[40px] lg:mt-[106px] text-justify">
+        <p className="text-[16px] sm:text-[18px] lg:text-[20px] font-medium max-w-full lg:max-w-[1115px] mt-[40px] lg:mt-[70px] text-justify">
           Kepedulian Anda akan hewan liar sangat berarti, dengan donasi yang
           Anda berikan memungkinkan kami untuk secara aktif terus berkampanye
           bagi hewan yang membutuhkan dan meningkatkan standar kesejahteraan

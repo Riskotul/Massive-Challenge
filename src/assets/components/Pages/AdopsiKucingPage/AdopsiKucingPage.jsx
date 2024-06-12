@@ -79,20 +79,20 @@ const AdopsiKucingPage = () => {
           <h1 className="text-center text-3xl lg:text-4xl font-bold mb-20 mt-20">
             Temukan Teman Terbaik Kamu
           </h1>
-          <div className="max-w-screen-lg mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-14 shadow-lg mb-20">
+          <div className="max-w-screen-lg mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-14 mb-20">
             {topCats.map((cat, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg shadow-xl w-full h-auto transform hover:scale-105 transition-transform flex flex-col justify-between"
+                className="bg-white rounded-[16px] shadow-xl w-full h-auto transform hover:scale-105 transition-transform flex flex-col justify-between"
               >
                 <div className="flex justify-center lg:justify-start">
                   <img
                     src={cat.image}
                     alt={cat.name}
-                    className="w-full h-56 lg:h-48 object-cover rounded-t-lg"
+                    className="w-full h-56 lg:h-48 object-cover rounded-t-[16px]"
                   />
                 </div>
-                <div className="bg-[#8DD67A] p-4 flex flex-col items-center text-center lg:text-left">
+                <div className="bg-[#ffffff] p-4 flex flex-col items-center text-center lg:text-left rounded-[16px]">
                   <h2 className="text-lg lg:text-xl font-bold mb-2">
                     {cat.name}
                   </h2>
@@ -101,7 +101,7 @@ const AdopsiKucingPage = () => {
                   </p>
                   <button
                     onClick={handleClickNavigate}
-                    className="bg-[#FA9F42] text-white py-2 px-4 rounded-lg shadow-xl"
+                    className="bg-[#FA9F42] text-white py-2 px-8 rounded-[32px] shadow-xl mt-3"
                   >
                     Lihat
                   </button>
@@ -109,20 +109,20 @@ const AdopsiKucingPage = () => {
               </div>
             ))}
           </div>
-          <div className="max-w-screen-lg mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-14 shadow-lg mb-20">
+          <div className="max-w-screen-lg mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-14 mb-20">
             {bottomCats.map((cat, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg shadow-xl w-full h-auto transform hover:scale-105 transition-transform flex flex-col justify-between"
+                className="bg-white rounded-[16px] shadow-xl w-full h-auto transform hover:scale-105 transition-transform flex flex-col justify-between"
               >
                 <div className="flex justify-center lg:justify-start">
                   <img
                     src={cat.image}
                     alt={cat.name}
-                    className="w-full h-56 lg:h-48 object-cover rounded-t-lg"
+                    className="w-full h-56 lg:h-48 object-cover rounded-t-[16px]"
                   />
                 </div>
-                <div className="bg-[#8DD67A] p-4 flex flex-col items-center text-center lg:text-left">
+                <div className="bg-[#ffffff] p-4 flex flex-col items-center text-center lg:text-left rounded-[16px]">
                   <h2 className="text-lg lg:text-xl font-bold mb-2">
                     {cat.name}
                   </h2>
@@ -131,7 +131,7 @@ const AdopsiKucingPage = () => {
                   </p>
                   <button
                     onClick={handleClickNavigate}
-                    className="bg-[#FA9F42] text-white py-2 px-4 rounded-lg shadow-xl"
+                    className="bg-[#FA9F42] text-white py-2 px-8 rounded-[32px] shadow-xl mt-3"
                   >
                     Lihat
                   </button>

@@ -22,7 +22,7 @@ const AboutPage = () => {
             <div className="main-content flex flex-col lg:flex-row items-center gap-10">
               <div className="content flex-1 mt-10 lg:mt-0">
                 <h1 className="text-4xl font-bold mb-12">Tentang Kami</h1>
-                <p className="text-xl leading-7">
+                <p className="text-xl leading-7 text-justify">
                   Kami berkomitmen untuk menyelamatkan, merawat, dan mencarikan
                   rumah baru bagi hewan-hewan terlantar di Pulau Jawa. Melalui
                   program adopsi yang bertanggung jawab, kami berusaha
@@ -114,28 +114,28 @@ const AboutPage = () => {
                 <img
                   src={galleryImage1}
                   alt="Gambar 1"
-                  className="w-full lg:w-[300px] h-auto object-cover rounded-xl shadow-xl"
+                  className="w-full lg:w-[300px] h-auto object-cover rounded-[20px] shadow-xl"
                 />
               </div>
               <div className="zigzag-item">
                 <img
                   src={galleryImage2}
                   alt="Gambar 2"
-                  className="w-full lg:w-[300px] h-auto object-cover rounded-xl shadow-xl"
+                  className="w-full lg:w-[300px] h-auto object-cover rounded-[20px] shadow-xl"
                 />
               </div>
               <div className="zigzag-item">
                 <img
                   src={galleryImage3}
                   alt="Gambar 3"
-                  className="w-full lg:w-[300px] h-auto object-cover rounded-xl shadow-xl"
+                  className="w-full lg:w-[300px] h-auto object-cover rounded-[20px] shadow-xl"
                 />
               </div>
               <div className="zigzag-item">
                 <img
                   src={galleryImage4}
                   alt="Gambar 4"
-                  className="w-full lg:w-[300px] h-auto object-cover rounded-xl shadow-xl"
+                  className="w-full lg:w-[300px] h-auto object-cover rounded-[20px] shadow-xl"
                 />
               </div>
             </div>

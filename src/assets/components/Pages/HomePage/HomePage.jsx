@@ -87,7 +87,7 @@ const HomePage = () => {
             </p>
             <button
               onClick={handlePopUpAdopsi}
-              className="w-full md:w-[150px] h-fit py-[10px] bg-[#FA9F42] rounded-2xl font-semibold mt-4 text-xl"
+              className="w-full md:w-[150px] h-fit py-[10px] bg-[#FA9F42] rounded-[32px] font-bold mt-4 text-xl "
             >
               Adopsi
             </button>
@@ -169,18 +169,24 @@ const HomePage = () => {
             style={{ maxWidth: "800px" }}
           />
           <div className="flex-1 py-12 px-6 md:py-20 md:px-20 text-center md:text-left">
-            <h1 className="text-xl md:text-2xl mb-6 md:mb-12 font-bold">
+            <h1 className="text-xl md:text-2xl mb-6 md:mb-12 font-semibold">
               “Temukan cara Anda agar dapat ikut berperan dalam menyelamatkan
               dan memberikan dukungan bagi hewan di Heywani.”
             </h1>
             <div className="flex flex-col md:flex-row justify-center md:justify-start items-center md:items-start">
-              <button className="bg-[#FA9F42] border-none text-black py-2 px-4 md:py-2 md:px-6 cursor-pointer rounded-xl text-lg md:text-xl mt-2 md:mt-4 md:mr-4">
-                <Link to="/donation" className="no-underline text-black">
+              <button className="bg-[#FA9F42] border-none text-black py-2 px-4 md:py-2 md:px-6 cursor-pointer rounded-[32px] text-lg md:text-xl mt-2 md:mt-4 md:mr-4">
+                <Link
+                  to="/donation"
+                  className="no-underline text-black font-bold"
+                >
                   Donasi
                 </Link>
               </button>
-              <button className="bg-[#FA9F42] border-none text-black py-2 px-4 md:py-2 md:px-6 cursor-pointer rounded-xl text-lg md:text-xl mt-2 md:mt-4">
-                <Link to="/contact" className="no-underline text-black">
+              <button className="bg-[#FA9F42] border-none text-black py-2 px-4 md:py-2 md:px-6 cursor-pointer rounded-[32px] text-lg md:text-xl mt-2 md:mt-4">
+                <Link
+                  to="/contact"
+                  className="no-underline text-black font-bold"
+                >
                   Evakuasi Hewan
                 </Link>
               </button>

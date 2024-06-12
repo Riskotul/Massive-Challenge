@@ -49,7 +49,7 @@ const PopUpTerkirim = ({ isPopUpOpen, handlePopUp }) => {
                 </div>
                 <button
                   onClick={handlePopUp}
-                  className="size-fit px-[40px] lg:px-[52px] py-3 bg-[#FA9F42] rounded-lg text-white text-[20px] lg:text-[24px] font-medium mt-10"
+                  className="size-fit px-[40px] lg:px-[52px] py-3 bg-[#FA9F42] rounded-[32px] text-white text-[20px] lg:text-[24px] font-medium mt-10"
                 >
                   Kembali
                 </button>
@@ -113,12 +113,12 @@ const FormSection = () => {
         <h1 className="text-[36px] font-bold">
           Kami Siap Membantu Anda Kirimkan Pesan Kepada Kami!{" "}
         </h1>
-        <div className="w-full md:w-[1113px] h-[auto] md:h-[670px] rounded-[20px] bg-[#FA9F42] py-[26px] pl-[61px] pr-[47px] flex flex-col gap-5">
+        <div className="w-full md:w-[1113px] h-[auto] md:h-[670px] rounded-[32px] bg-[#FA9F42] py-[26px] pl-[61px] pr-[47px] flex flex-col gap-5">
           <div className="flex flex-col gap-[10px]">
             <h1 className="font-semibold text-[30px]">Nama</h1>
             <input
               type="text"
-              className="w-full h-[66px] rounded-[20px] py-3 px-6 text-2xl font-medium"
+              className="w-full h-[66px] rounded-[32px] py-3 px-6 text-2xl font-medium"
             />
           </div>
           <div className="w-full md:flex gap-[47px]">
@@ -126,14 +126,14 @@ const FormSection = () => {
               <h1 className="font-semibold text-[30px]">No. Handphone</h1>
               <input
                 type="text"
-                className="w-full md:w-[483px] h-[66px] rounded-[20px] py-3 px-6 text-2xl font-medium"
+                className="w-full md:w-[483px] h-[66px] rounded-[32px] py-3 px-6 text-2xl font-medium"
               />
             </div>
             <div className="flex flex-col gap-[10px]">
               <h1 className="font-semibold text-[30px]">Email</h1>
               <input
                 type="text"
-                className="w-full md:w-[483px] h-[66px] rounded-[20px] py-3 px-6 text-2xl font-medium"
+                className="w-full md:w-[483px] h-[66px] rounded-[32px] py-3 px-6 text-2xl font-medium"
               />
             </div>
           </div>
@@ -143,14 +143,14 @@ const FormSection = () => {
               <textarea
                 type=""
                 cols={80} // Menentukan jumlah kolom
-                className="w-full h-[221px] rounded-[20px] pt-6 px-6 text-2xl font-medium"
+                className="w-full h-[221px] rounded-[32px] pt-6 px-6 text-2xl font-medium"
               />
             </div>
           </div>
 
           <button
             onClick={handlePopUp}
-            className="w-full md:w-[193px] h-[53px] px-[63px] py-2 rounded-[20px] bg-white flex justify-center items-center text-[24px] font-bold self-center"
+            className="w-full md:w-[193px] h-[53px] px-[63px] py-2 rounded-[32px] bg-white flex justify-center items-center text-[24px] font-bold self-center"
           >
             Kirim
           </button>

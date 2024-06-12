@@ -6,7 +6,7 @@ const HeaderDetailSectionAnjing = () => {
   return (
     <section className="w-full max-w-[1220px] flex flex-col lg:flex-row gap-6 lg:gap-12 mt-12 lg:mt-20 px-4 md:px-8 lg:px-0 relative">
       <Link
-        to="/services"
+        to="/adopsi-anjing"
         className="text-[24px] md:text-[30px] absolute left-4 lg:left-[-70px] top-[-44px] cursor-pointer active:scale-90 transition-all"
       >
         <FontAwesomeIcon icon={faChevronLeft} />

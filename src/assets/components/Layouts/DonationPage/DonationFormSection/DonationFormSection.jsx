@@ -46,7 +46,7 @@ const PopUpTerkirim = ({ isPopUpOpen, handlePopUp }) => {
                 </h1>
                 <button
                   onClick={handlePopUp}
-                  className="size-fit px-[40px] lg:px-[52px] py-3 bg-[#FA9F42] rounded-lg text-white text-[20px] lg:text-[24px] font-medium mt-10"
+                  className="size-fit px-[40px] lg:px-[52px] py-3 bg-[#FA9F42] rounded-[32px] text-white text-[20px] lg:text-[24px] font-medium mt-10"
                 >
                   Kembali
                 </button>
@@ -79,7 +79,7 @@ const PopUpTerkirim = ({ isPopUpOpen, handlePopUp }) => {
                 </div>
                 <button
                   onClick={handlePopUp}
-                  className="size-fit px-[40px] lg:px-[52px] py-3 bg-[#FA9F42] rounded-lg text-white text-[20px] lg:text-[24px] font-medium mt-10"
+                  className="size-fit px-[40px] lg:px-[52px] py-3 bg-[#FA9F42] rounded-[32px] text-white text-[20px] lg:text-[24px] font-medium mt-10"
                 >
                   Kembali
                 </button>
@@ -118,47 +118,47 @@ const DonationFormSection = () => {
           <div className="flex flex-col gap-[23px] mt-[20px] lg:mt-[45px]">
             <input
               type="text"
-              className="w-full max-w-[529px] h-[55px] rounded-[20px] px-4 font-semibold"
+              className="w-full max-w-[529px] h-[55px] rounded-[32px] px-4 font-semibold"
               placeholder="Name"
             />
             <input
               type="text"
-              className="w-full max-w-[529px] h-[55px] rounded-[20px] px-4 font-semibold"
+              className="w-full max-w-[529px] h-[55px] rounded-[32px] px-4 font-semibold"
               placeholder="Nominal"
             />
             <div className="relative w-full max-w-[400px] h-[55px]">
               {" "}
-              <select className="w-full h-[55px] rounded-[20px] px-4 font-semibold text-[#585858] appearance-none">
+              <select className="w-full h-[55px] rounded-[32px] px-4 font-semibold text-[#585858] appearance-none">
                 <option value="" disabled selected hidden>
                   Metode Pembayaran
                 </option>
                 <option
                   value="Bank Transfer"
-                  className="w-[400px] h-[55px] rounded-[20px] px-4 font-semibold text-[#585858] relative"
+                  className="w-[400px] h-[55px] rounded-[32px] px-4 font-semibold text-[#585858] relative"
                 >
                   Dana
                 </option>
                 <option
                   value="Paylater"
-                  className="w-[400px] h-[55px] rounded-[20px] px-4 font-semibold text-[#585858] relative"
+                  className="w-[400px] h-[55px] rounded-[32px] px-4 font-semibold text-[#585858] relative"
                 >
                   Gopay
                 </option>
                 <option
                   value="Lainnya"
-                  className="w-[400px] h-[55px] rounded-[20px] px-4 font-semibold text-[#585858] relative"
+                  className="w-[400px] h-[55px] rounded-[32px] px-4 font-semibold text-[#585858] relative"
                 >
                   Ovo
                 </option>
                 <option
                   value="Lainnya"
-                  className="w-[400px] h-[55px] rounded-[20px] px-4 font-semibold text-[#585858] relative"
+                  className="w-[400px] h-[55px] rounded-[32px] px-4 font-semibold text-[#585858] relative"
                 >
                   LinkAja
                 </option>
                 <option
                   value="Lainnya"
-                  className="w-[400px] h-[55px] rounded-[20px] px-4 font-semibold text-[#585858] relative"
+                  className="w-[400px] h-[55px] rounded-[32px] px-4 font-semibold text-[#585858] relative"
                 >
                   Shopeepay
                 </option>
@@ -170,7 +170,7 @@ const DonationFormSection = () => {
             </div>
             <button
               onClick={handlePopUp}
-              className="w-[172px] h-fit py-3 rounded-[20px] bg-white font-bold self-center mt-[19px]"
+              className="w-[172px] h-fit py-3 rounded-[32px] bg-white font-bold self-center mt-[19px]"
             >
               Donasi
             </button>
