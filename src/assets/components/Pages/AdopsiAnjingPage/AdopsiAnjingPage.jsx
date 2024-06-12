@@ -57,10 +57,10 @@ const AdopsiAnjingPage = () => {
       <div>
         <div className="bg-[#8DD67A] py-12 px-8 lg:px-16 flex flex-col lg:flex-row justify-between items-center mt-20 ">
           <div className="flex-1 flex flex-col items-center lg:items-start">
-            <h1 className="text-4xl lg:text-6xl font-bold mb-5 text-center lg:text-left">
+            <h1 className="text-2xl lg:text-4xl font-bold mb-5 text-center lg:text-left">
               Hallo pecinta Anjing
             </h1>
-            <p className="text-xl lg:text-3xl text-center lg:text-left">
+            <p className="text-xl lg:text-2xl text-center lg:text-left">
               “Temukan sahabat anjing impianmu di sini. Kami menyediakan anjing
               yang <br />
               siap untuk diadopsi. Ayo, selamatkan dan rawat anjing ini bersama
@@ -70,7 +70,7 @@ const AdopsiAnjingPage = () => {
           <img
             src={HeaderAdopsianjing}
             alt="Deskripsi gambar"
-            className="w-[874px] h-[578px]"
+            className="w-[674px] h-[378px]"
           />
         </div>
 
