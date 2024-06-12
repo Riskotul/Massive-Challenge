@@ -55,22 +55,22 @@ const AdopsiAnjingPage = () => {
     <>
       <Navbar />{" "}
       <div>
-        <div className="bg-[#8DD67A] py-12 px-8 lg:px-16 flex flex-col lg:flex-row justify-between items-center mt-20 ">
+        <div className="bg-[#8DD67A] py-12 px-8 lg:px-16 flex flex-col lg:flex-row justify-between items-center mt-10">
           <div className="flex-1 flex flex-col items-center lg:items-start">
             <h1 className="text-2xl lg:text-4xl font-bold mb-5 text-center lg:text-left">
               Hallo pecinta Anjing
             </h1>
-            <p className="text-xl lg:text-2xl text-center lg:text-left">
-              “Temukan sahabat anjing impianmu di sini. Kami menyediakan anjing
+            <p className="text-xl lg:text-2xl text-center lg:text-left mt-10">
+              “Temukan sahabat Anjing impianmu di sini. Kami menyediakan Anjing
               yang <br />
-              siap untuk diadopsi. Ayo, selamatkan dan rawat anjing ini bersama
+              siap untuk diadopsi. Ayo, selamatkan dan rawat Anjing ini bersama
               kami!”
             </p>
           </div>
           <img
             src={HeaderAdopsianjing}
             alt="Deskripsi gambar"
-            className="w-[674px] h-[378px]"
+            className="w-[700px] h-[440px]"
           />
         </div>
 
@@ -78,20 +78,20 @@ const AdopsiAnjingPage = () => {
           <h1 className="text-center text-3xl lg:text-4xl font-bold mb-20 mt-20">
             Temukan Teman Terbaik Kamu
           </h1>
-          <div className="max-w-screen-lg mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10 shadow-lg">
+          <div className="max-w-screen-lg mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10">
             {topDogs.map((dog, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg shadow-xl w-full h-auto transform hover:scale-105 transition-transform flex flex-col justify-between"
+                className="bg-white rounded-[16px] shadow-xl w-full h-auto transform hover:scale-105 transition-transform flex flex-col justify-between"
               >
                 <div className="flex justify-center lg:justify-start">
                   <img
                     src={dog.image}
                     alt={dog.name}
-                    className="w-full h-56 lg:h-48 object-cover rounded-t-lg"
+                    className="w-full h-56 lg:h-48 object-cover rounded-t-[16px]"
                   />
                 </div>
-                <div className="bg-[#8DD67A] p-4 flex flex-col items-center text-center lg:text-left">
+                <div className="bg-[#ffffff] p-4 flex flex-col items-center text-center lg:text-left rounded-[16px]">
                   <h2 className="text-lg lg:text-xl font-bold mb-2">
                     {dog.name}
                   </h2>
@@ -100,7 +100,7 @@ const AdopsiAnjingPage = () => {
                   </p>
                   <button
                     onClick={handleClickNavigate}
-                    className="bg-[#FA9F42] text-white py-2 px-4 rounded-lg shadow-xl"
+                    className="bg-[#FA9F42] text-white font-semibold py-2 px-8 rounded-[32px] shadow-xl mt-3"
                   >
                     Lihat
                   </button>
@@ -108,20 +108,20 @@ const AdopsiAnjingPage = () => {
               </div>
             ))}
           </div>
-          <div className="max-w-screen-lg mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10 mt-6 lg:mt-10 shadow-lg mb-20">
+          <div className="max-w-screen-lg mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10 mt-6 lg:mt-10 mb-20">
             {bottomDogs.map((dog, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg shadow-xl w-full h-auto transform hover:scale-105 transition-transform flex flex-col justify-between"
+                className="bg-white rounded-[16px] shadow-xl w-full h-auto transform hover:scale-105 transition-transform flex flex-col justify-between"
               >
                 <div className="flex justify-center lg:justify-start">
                   <img
                     src={dog.image}
                     alt={dog.name}
-                    className="w-full h-56 lg:h-48 object-cover rounded-t-lg"
+                    className="w-full h-56 lg:h-48 object-cover rounded-t-[16px]"
                   />
                 </div>
-                <div className="bg-[#8DD67A] p-4 flex flex-col items-center text-center lg:text-left">
+                <div className="bg-[#ffffff] p-4 flex flex-col items-center text-center lg:text-left rounded-[16px]">
                   <h2 className="text-lg lg:text-xl font-bold mb-2">
                     {dog.name}
                   </h2>
@@ -130,7 +130,7 @@ const AdopsiAnjingPage = () => {
                   </p>
                   <button
                     onClick={handleClickNavigate}
-                    className="bg-[#FA9F42] text-white py-2 px-4 rounded-lg shadow-xl"
+                    className="bg-[#FA9F42] text-white font-semibold py-2 px-8 rounded-[32px] shadow-xl mt-3"
                   >
                     Lihat
                   </button>

@@ -6,7 +6,7 @@ const ContactSection = () => {
           <img
             src="/images/ContactPage/contact-telp.png"
             alt=""
-            className="w-[53px] h-[46px]"
+            className="w-[70px] h-[70px]"
           />
         </div>
         <h1 className="text-[24px] lg:text-[36px] font-bold mt-3">Hotline</h1>
@@ -17,7 +17,7 @@ const ContactSection = () => {
           <img
             src="/images/ContactPage/contact-msg.png"
             alt=""
-            className="w-[50px] h-[36px]"
+            className="w-[53px] h-[43px]"
           />
         </div>
         <h1 className="text-[24px] lg:text-[36px] font-bold mt-3">Email</h1>
@@ -28,7 +28,7 @@ const ContactSection = () => {
           <img
             src="/images/ContactPage/contact-location.png"
             alt=""
-            className="w-[64px] h-[55px]"
+            className="w-[58px] h-[57px]"
           />
         </div>
         <h1 className="text-[24px] lg:text-[36px] font-bold mt-3">Alamat</h1>

@@ -106,7 +106,7 @@ export const Navbar = () => {
             <img
               src="/images/profile-picture.png"
               alt="Profile"
-              className="w-10 h-10 lg:size-[70px]"
+              className="w-8 h-8 lg:size-[65px]"
             />
             <h1 className="text-[16px] lg:text-[24px] font-bold text-black">
               {name}

@@ -15,7 +15,7 @@ const HeroSection = () => {
       <img
         src="/images/ContactPage/hero-contact.png"
         alt="Hero Contact"
-        className="w-full lg:w-[655px] h-auto lg:h-[397px] mt-4 lg:mt-0"
+        className="w-full lg:w-[600px] h-auto lg:h-[350px] mt-4 lg:mt-0"
       />
     </section>
   );

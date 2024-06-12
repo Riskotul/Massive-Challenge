@@ -69,7 +69,7 @@ const ServicesHeroSection = () => {
         </h2>
         <button
           onClick={handlePopUpAdopsi}
-          className="w-full md:w-[200px] h-fit py-[10px] bg-white rounded-lg font-semibold text-2xl mt-4"
+          className="w-full md:w-[200px] h-fit py-[10px] bg-white rounded-[32px] font-semibold text-2xl mt-4"
         >
           Adopsi
         </button>
