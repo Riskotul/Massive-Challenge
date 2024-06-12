@@ -76,10 +76,10 @@ const HomePage = () => {
         <div className="bg-[#8DD67A] w-full py-12 md:py-24 px-6 md:px-12 lg:px-20 flex flex-col md:flex-row justify-between items-center gap-10">
           <PopUpAdopsi onClickChange={handlePopUpAdopsi} isOpen={popUpAdopsi} />
           <div className="flex-1 text-center md:text-left">
-            <h1 className="text-5xl md:text-4xl lg:text-7xl mb-4 md:mb-8 font-bold">
+            <h1 className="text-3xl md:text-2xl lg:text-4xl mb-4 md:mb-8 font-bold">
               Heywani
             </h1>
-            <p className="text-xl md:text-2xl lg:text-3xl mb-4 md:mb-8">
+            <p className="text-xl md:text-2xl lg:text-2xl mb-4 md:mb-8">
               Selamatkan, adopsi, dan cintai hewan-hewan terlantar bersama kami.
               Jadilah bagian dari perubahan dan berikan mereka rumah penuh
               kasih. Mari bersama-sama menciptakan dunia yang lebih baik untuk
@@ -87,7 +87,7 @@ const HomePage = () => {
             </p>
             <button
               onClick={handlePopUpAdopsi}
-              className="w-full md:w-[200px] h-fit py-[10px] bg-[#FA9F42] rounded-2xl font-semibold mt-4 text-4xl"
+              className="w-full md:w-[200px] h-fit py-[10px] bg-[#FA9F42] rounded-2xl font-semibold mt-4 text-2xl"
             >
               Adopsi
             </button>
@@ -96,7 +96,7 @@ const HomePage = () => {
             src={headerImage}
             alt="Deskripsi gambar"
             className="w-full md:w-auto h-[320px] md:h-auto"
-            style={{ maxWidth: "900px" }}
+            style={{ maxWidth: "600px" }}
           />
         </div>
 

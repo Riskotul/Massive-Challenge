@@ -9,14 +9,23 @@ const ProfilePage = () => {
   const profilePicture = "/images/ProfilePage/foto_profil.png";
   const navigate = useNavigate();
 
-  const [profileImage, setProfilImage] = useState(profilePicture);
+  const [profileImage, setProfileImage] = useState(profilePicture);
+  const [name, setName] = useState("");
+  const [job, setJob] = useState("");
+  const [gender, setGender] = useState("");
+  const [email, setEmail] = useState("");
+  const [birthdate, setBirthdate] = useState("");
+  const [phone, setPhone] = useState("");
+  const [address, setAddress] = useState("");
+  const [msg, setMsg] = useState("");
+  const [isToken, setToken] = useState(false);
 
   const handleImageChange = (event) => {
     const file = event.target.files[0];
     if (file) {
       const reader = new FileReader();
       reader.onload = (e) => {
-        setProfilImage(e.target.result);
+        setProfileImage(e.target.result);
       };
       reader.readAsDataURL(file);
     }
@@ -36,12 +45,9 @@ const ProfilePage = () => {
 
   useEffect(() => {
     refreshToken();
+    fetchUserData();
   }, []);
 
-  // Decoded Token
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [isToken, setToken] = useState(false);
   function parseJwt(token) {
     var base64Url = token.split(".")[1];
     var base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
@@ -74,11 +80,30 @@ const ProfilePage = () => {
     }
   };
 
+  const fetchUserData = async () => {
+    try {
+      const response = await axios.get("http://localhost:5000/user");
+      const user = response.data;
+      setName(user.name);
+      setJob(user.job);
+      setGender(user.gender);
+      setEmail(user.email);
+      setBirthdate(user.birthdate);
+      setPhone(user.phone);
+      setAddress(user.address);
+      setProfileImage(user.profileImage || profilePicture);
+    } catch (error) {
+      console.error("Error fetching user data:", error);
+      setMsg("Gagal memuat data pengguna.");
+    }
+  };
+
   return (
     <>
       <Navbar />
       <div>
-        <div className="bg-white rounded-lg shadow-lg p-8 mt-6 max-w-7xl w-full mx-auto">
+        <div className="bg-white rounded-lg shadow-lg p-8 mt-6 max-w-7xl w-full mx-auto mt-60 mb-20">
+          {msg && <p className="text-red-500 text-center mb-4">{msg}</p>}
           <div className="flex items-center border border-black rounded-lg p-4 mb-8 relative gap-12">
             <input
               type="file"
@@ -114,7 +139,7 @@ const ProfilePage = () => {
                   className="p-2 border border-black rounded-md text-gray-700"
                   type="text"
                   id="name"
-                  defaultValue={name}
+                  value={name}
                   readOnly
                 />
               </div>
@@ -126,6 +151,7 @@ const ProfilePage = () => {
                   className="p-2 border border-black rounded-md text-gray-700"
                   type="text"
                   id="job"
+                  value={job}
                   readOnly
                 />
               </div>
@@ -137,6 +163,7 @@ const ProfilePage = () => {
                   className="p-2 border border-black rounded-md text-gray-700"
                   type="text"
                   id="gender"
+                  value={gender}
                   readOnly
                 />
               </div>
@@ -148,7 +175,7 @@ const ProfilePage = () => {
                   className="p-2 border border-black rounded-md text-gray-700"
                   type="email"
                   id="email"
-                  defaultValue={email}
+                  value={email}
                   readOnly
                 />
               </div>
@@ -160,6 +187,7 @@ const ProfilePage = () => {
                   className="p-2 border border-black rounded-md text-gray-700"
                   type="text"
                   id="birthdate"
+                  value={birthdate}
                   readOnly
                 />
               </div>
@@ -171,10 +199,11 @@ const ProfilePage = () => {
                   className="p-2 border border-black rounded-md text-gray-700"
                   type="tel"
                   id="phone"
+                  value={phone}
                   readOnly
                 />
               </div>
-              <div className="form-group flex flex-col ">
+              <div className="form-group flex flex-col">
                 <label className="text-gray-600 mb-2" htmlFor="address">
                   Alamat
                 </label>
@@ -182,6 +211,7 @@ const ProfilePage = () => {
                   className="p-2 border border-black rounded-md text-gray-700"
                   type="text"
                   id="address"
+                  value={address}
                   readOnly
                 />
               </div>
