@@ -99,10 +99,21 @@ PopUpTerkirim.propTypes = {
 
 const DonationFormSection = () => {
   const [isPopOpen, setIsPopOpen] = useState(false);
+  const [name, setName] = useState("");
+  const [nominal, setNominal] = useState("");
+  const [metodePembayaran, setMetodepembayaran] = useState("");
+
+  const handleSubmit = () => {
+    setIsPopOpen(true); 
+  };
 
   const handlePopUp = () => {
-    setIsPopOpen(!isPopOpen);
+    setIsPopOpen(false);
+    setName("");
+    setNominal("");
+    setMetodepembayaran("");
   };
+
   return (
     <>
       <PopUpTerkirim isPopUpOpen={isPopOpen} handlePopUp={handlePopUp} />
@@ -120,20 +131,31 @@ const DonationFormSection = () => {
               type="text"
               className="w-full max-w-[529px] h-[55px] rounded-[32px] px-4 font-semibold"
               placeholder="Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
             <input
               type="text"
               className="w-full max-w-[529px] h-[55px] rounded-[32px] px-4 font-semibold"
               placeholder="Nominal"
+              value={nominal}
+              onChange={(e) => setNominal(e.target.value)}
             />
             <div className="relative w-full max-w-[400px] h-[55px]">
               {" "}
-              <select className="w-full h-[55px] rounded-[32px] px-4 font-semibold text-[#585858] appearance-none">
-                <option value="" disabled selected hidden>
-                  Metode Pembayaran
-                </option>
+              <select 
+                className="w-full h-[55px] rounded-[32px] px-4 font-semibold text-[#585858] appearance-none"
+                value={metodePembayaran}
+                onChange={(e) => setMetodepembayaran(e.target.value)}
+              >
                 <option
                   value="Bank Transfer"
+                  className="w-[400px] h-[55px] rounded-[32px] px-4 font-semibold text-[#585858] relative"
+                >
+                 Metode Pembayaran
+                </option>
+                <option
+                  value="Paylater"
                   className="w-[400px] h-[55px] rounded-[32px] px-4 font-semibold text-[#585858] relative"
                 >
                   Dana
@@ -169,7 +191,7 @@ const DonationFormSection = () => {
               />
             </div>
             <button
-              onClick={handlePopUp}
+              onClick={handleSubmit}
               className="w-[172px] h-fit py-3 rounded-[32px] bg-white font-bold self-center mt-[19px]"
             >
               Donasi

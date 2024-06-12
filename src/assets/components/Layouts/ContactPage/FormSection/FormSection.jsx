@@ -4,9 +4,11 @@ import "tailwindcss/tailwind.css";
 
 const PopUpTerkirim = ({ isPopUpOpen, handlePopUp }) => {
   const [isToken, setToken] = useState(false);
+  
   useEffect(() => {
     refreshToken();
   }, []);
+
   const refreshToken = () => {
     try {
       const tokenStorage = localStorage.getItem("token");
@@ -21,75 +23,72 @@ const PopUpTerkirim = ({ isPopUpOpen, handlePopUp }) => {
       console.log(error);
     }
   };
+
   return (
     <>
       {isToken ? (
-        <>
-          <div
-            className={
-              isPopUpOpen
-                ? "fixed inset-0 z-[60] items-center justify-center backdrop-filter backdrop-brightness-[.7] backdrop-blur-sm flex"
-                : "fixed inset-0 z-[60] items-center justify-center backdrop-filter backdrop-brightness-[.7] backdrop-blur-sm hidden"
-            }
-          >
-            <div className="w-[90%] max-w-[500px] h-[560px] rounded-[20px] bg-white relative border">
-              <div className="w-[191px] h-[191px] rounded-full bg-[#8DD67A] absolute -top-[95px] left-1/2 transform -translate-x-1/2 flex justify-center items-center">
-                <img src="/images/ContactPage/done-icon.png" alt="" />
+        <div
+          className={
+            isPopUpOpen
+              ? "fixed inset-0 z-[60] items-center justify-center backdrop-filter backdrop-brightness-[.7] backdrop-blur-sm flex"
+              : "fixed inset-0 z-[60] items-center justify-center backdrop-filter backdrop-brightness-[.7] backdrop-blur-sm hidden"
+          }
+        >
+          <div className="w-[90%] max-w-[500px] h-[560px] rounded-[20px] bg-white relative border">
+            <div className="w-[191px] h-[191px] rounded-full bg-[#8DD67A] absolute -top-[95px] left-1/2 transform -translate-x-1/2 flex justify-center items-center">
+              <img src="/images/ContactPage/done-icon.png" alt="" />
+            </div>
+            <div className="mt-[137px] w-full flex flex-col items-center gap-4">
+              <h1 className="text-[36px] lg:text-[48px] font-bold">
+                Terima Kasih!
+              </h1>
+              <div className="flex flex-col px-4">
+                <p className="text-[18px] lg:text-[20px] font-medium text-center mt-10">
+                  Pesan Anda telah kami terima dan akan segera kami tanggapi.
+                  Terima kasih telah mendukung misi penyelamatan hewan bersama
+                  Heywani!
+                </p>
               </div>
-              <div className="mt-[137px] w-full flex flex-col items-center gap-4">
-                <h1 className="text-[36px] lg:text-[48px] font-bold">
-                  Terima Kasih!
-                </h1>
-                <div className="flex flex-col px-4">
-                  <p className="text-[18px] lg:text-[20px] font-medium text-center mt-10">
-                    Pesan Anda telah kami terima dan akan segera kami tanggapi.
-                    Terima kasih telah mendukung misi penyelamatan hewan
-                    bersama Heywani!
-                  </p>
-                </div>
-                <button
-                  onClick={handlePopUp}
-                  className="size-fit px-[40px] lg:px-[52px] py-3 bg-[#FA9F42] rounded-[32px] text-white text-[20px] lg:text-[24px] font-medium mt-10"
-                >
-                  Kembali
-                </button>
-              </div>
+              <button
+                onClick={handlePopUp}
+                className="size-fit px-[40px] lg:px-[52px] py-3 bg-[#FA9F42] rounded-[32px] text-white text-[20px] lg:text-[24px] font-medium mt-10"
+              >
+                Kembali
+              </button>
             </div>
           </div>
-        </>
+        </div>
       ) : (
-        <>
-          <div
-            className={
-              isPopUpOpen
-                ? "fixed inset-0 z-[60] items-center justify-center backdrop-filter backdrop-brightness-[.7] backdrop-blur-sm flex"
-                : "fixed inset-0 z-[60] items-center justify-center backdrop-filter backdrop-brightness-[.7] backdrop-blur-sm hidden"
-            }
-          >
-            <div className="w-[90%] max-w-[500px] h-[560px] rounded-[20px] bg-white relative border">
-              <div className="w-[191px] h-[191px] rounded-full bg-[#FA4242] absolute -top-[95px] left-1/2 transform -translate-x-1/2 flex justify-center items-center">
-                <img src="/images/ContactPage/!.png" alt="" />
+        <div
+          className={
+            isPopUpOpen
+              ? "fixed inset-0 z-[60] items-center justify-center backdrop-filter backdrop-brightness-[.7] backdrop-blur-sm flex"
+              : "fixed inset-0 z-[60] items-center justify-center backdrop-filter backdrop-brightness-[.7] backdrop-blur-sm hidden"
+          }
+        >
+          <div className="w-[90%] max-w-[500px] h-[560px] rounded-[20px] bg-white relative border">
+            <div className="w-[191px] h-[191px] rounded-full bg-[#FA4242] absolute -top-[95px] left-1/2 transform -translate-x-1/2 flex justify-center items-center">
+              <img src="/images/ContactPage/!.png" alt="" />
+            </div>
+            <div className="mt-[137px] w-full flex flex-col items-center gap-4">
+              <h1 className="text-[36px] lg:text-[48px] font-bold">
+                Perhatian
+              </h1>
+              <div className="flex flex-col px-4">
+                <p className="text-[18px] lg:text-[20px] font-medium text-center mt-10">
+                  Untuk memberikan respons terbaik kepada Anda . Silahkan
+                  masuk/daftar akun terlebih dahulu
+                </p>
               </div>
-              <div className="mt-[137px] w-full flex flex-col items-center gap-4">
-                <h1 className="text-[36px] lg:text-[48px] font-bold">
-                  Perhatian
-                </h1>
-                <div className="flex flex-col px-4">
-                  <p className="text-[18px] lg:text-[20px] font-medium text-center mt-10">
-                    Untuk memberikan respons terbaik kepada Anda . Silahkan
-                    masuk/daftar akun terlebih dahulu
-                  </p>
-                </div>
-                <button
-                  onClick={handlePopUp}
-                  className="size-fit px-[40px] lg:px-[52px] py-3 bg-[#FA9F42] rounded-lg text-white text-[20px] lg:text-[24px] font-medium mt-10"
-                >
-                  Kembali
-                </button>
-              </div>
+              <button
+                onClick={handlePopUp}
+                className="size-fit px-[40px] lg:px-[52px] py-3 bg-[#FA9F42] rounded-lg text-white text-[20px] lg:text-[24px] font-medium mt-10"
+              >
+                Kembali
+              </button>
             </div>
           </div>
-        </>
+        </div>
       )}
     </>
   );
@@ -102,10 +101,23 @@ PopUpTerkirim.propTypes = {
 
 const FormSection = () => {
   const [isPopOpen, setIsPopOpen] = useState(false);
+  const [nama, setNama] = useState("");
+  const [noHp, setNoHp] = useState("");
+  const [email, setEmail] = useState("");
+  const [pesan, setPesan] = useState("");
+
+  const handleSubmit = () => {
+    setIsPopOpen(true); 
+  };
 
   const handlePopUp = () => {
-    setIsPopOpen(!isPopOpen);
+    setIsPopOpen(false); 
+    setNama("");
+    setNoHp("");
+    setEmail("");
+    setPesan("");
   };
+
   return (
     <>
       <PopUpTerkirim isPopUpOpen={isPopOpen} handlePopUp={handlePopUp} />
@@ -119,6 +131,8 @@ const FormSection = () => {
             <input
               type="text"
               className="w-full h-[66px] rounded-[32px] py-3 px-6 text-2xl font-medium"
+              value={nama}
+              onChange={(e) => setNama(e.target.value)}
             />
           </div>
           <div className="w-full md:flex gap-[47px]">
@@ -127,6 +141,8 @@ const FormSection = () => {
               <input
                 type="text"
                 className="w-full md:w-[483px] h-[66px] rounded-[32px] py-3 px-6 text-2xl font-medium"
+                value={noHp}
+                onChange={(e) => setNoHp(e.target.value)}
               />
             </div>
             <div className="flex flex-col gap-[10px]">
@@ -134,6 +150,8 @@ const FormSection = () => {
               <input
                 type="text"
                 className="w-full md:w-[483px] h-[66px] rounded-[32px] py-3 px-6 text-2xl font-medium"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
           </div>
@@ -144,12 +162,14 @@ const FormSection = () => {
                 type=""
                 cols={80} // Menentukan jumlah kolom
                 className="w-full h-[221px] rounded-[32px] pt-6 px-6 text-2xl font-medium"
+                value={pesan}
+                onChange={(e) => setPesan(e.target.value)}
               />
             </div>
           </div>
 
           <button
-            onClick={handlePopUp}
+            onClick={handleSubmit}
             className="w-full md:w-[193px] h-[53px] px-[63px] py-2 rounded-[32px] bg-white flex justify-center items-center text-[24px] font-bold self-center"
           >
             Kirim
