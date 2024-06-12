@@ -56,7 +56,7 @@ const AdopsiKucingPage = () => {
     <>
       <Navbar />
       <div>
-        <div className="bg-[#8DD67A] py-12 px-8 lg:px-16 flex flex-col lg:flex-row justify-between items-center ">
+        <div className="bg-[#8DD67A] py-12 px-8 lg:px-16 flex flex-col lg:flex-row justify-between items-center mt-10">
           <div className="flex-1 flex flex-col items-center lg:items-start">
             <h1 className="text-2xl lg:text-4xl font-bold mb-5 text-center lg:text-left">
               Hallo pecinta kucing
@@ -71,7 +71,7 @@ const AdopsiKucingPage = () => {
           <img
             src={HeaderAdopsikucing}
             alt="Deskripsi gambar"
-            className="w-[774px] h-[478px]"
+            className="w-[700px] h-[440px]"
           />
         </div>
 

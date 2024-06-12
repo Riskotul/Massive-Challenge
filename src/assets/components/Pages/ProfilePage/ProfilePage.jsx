@@ -102,7 +102,7 @@ const ProfilePage = () => {
     <>
       <Navbar />
       <div>
-        <div className="bg-white rounded-lg shadow-lg p-8 mt-6 max-w-7xl w-full mx-auto mt-60 mb-20">
+        <div className="bg-white rounded-lg shadow-lg p-8 max-w-7xl w-full mx-auto mt-40 mb-20">
           {msg && <p className="text-red-500 text-center mb-4">{msg}</p>}
           <div className="flex items-center border border-black rounded-lg p-4 mb-8 relative gap-12">
             <input

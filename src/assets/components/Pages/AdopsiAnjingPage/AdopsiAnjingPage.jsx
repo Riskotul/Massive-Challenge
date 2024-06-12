@@ -55,22 +55,22 @@ const AdopsiAnjingPage = () => {
     <>
       <Navbar />{" "}
       <div>
-        <div className="bg-[#8DD67A] py-12 px-8 lg:px-16 flex flex-col lg:flex-row justify-between items-center mt-20 ">
+        <div className="bg-[#8DD67A] py-12 px-8 lg:px-16 flex flex-col lg:flex-row justify-between items-center mt-10">
           <div className="flex-1 flex flex-col items-center lg:items-start">
             <h1 className="text-2xl lg:text-4xl font-bold mb-5 text-center lg:text-left">
-              Hallo pecinta Anjing
+              Hallo pecinta kucing
             </h1>
-            <p className="text-xl lg:text-2xl text-center lg:text-left">
-              “Temukan sahabat anjing impianmu di sini. Kami menyediakan anjing
+            <p className="text-xl lg:text-2xl text-center lg:text-left mt-10">
+              “Temukan sahabat kucing impianmu di sini. Kami menyediakan kucing
               yang <br />
-              siap untuk diadopsi. Ayo, selamatkan dan rawat anjing ini bersama
+              siap untuk diadopsi. Ayo, selamatkan dan rawat kucing ini bersama
               kami!”
             </p>
           </div>
           <img
             src={HeaderAdopsianjing}
             alt="Deskripsi gambar"
-            className="w-[674px] h-[378px]"
+            className="w-[700px] h-[440px]"
           />
         </div>
 
